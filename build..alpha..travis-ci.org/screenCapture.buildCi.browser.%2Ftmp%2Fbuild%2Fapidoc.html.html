@@ -1,0 +1,4227 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/twitter/twitter-text-js">twitter-text (v1.14.3)</a>
+</h1>
+<h4>official twitter text linkification</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text">module twitter-text</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLink">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLink
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLinkCashtags">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkCashtags
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLinkEntities">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkEntities
+            <span class="apidocSignatureSpan">(text, entities, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLinkHashtags">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkHashtags
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLinkUrlsCustom">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkUrlsCustom
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLinkUsernamesOrLists">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkUsernamesOrLists
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLinkWithJSON">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkWithJSON
+            <span class="apidocSignatureSpan">(text, json, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.convertUnicodeIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>convertUnicodeIndices
+            <span class="apidocSignatureSpan">(text, entities, indicesInUTF16)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractCashtags">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractCashtags
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractCashtagsWithIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractCashtagsWithIndices
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractEntitiesWithIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractEntitiesWithIndices
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractHashtags">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractHashtags
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractHashtagsWithIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractHashtagsWithIndices
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractHtmlAttrsFromOptions">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractHtmlAttrsFromOptions
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractMentions">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractMentions
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractMentionsOrListsWithIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractMentionsOrListsWithIndices
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractMentionsWithIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractMentionsWithIndices
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractReplies">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractReplies
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractUrls">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractUrls
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractUrlsWithIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractUrlsWithIndices
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.getTweetLength">
+            function <span class="apidocSignatureSpan">twitter-text.</span>getTweetLength
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.getUnicodeTextLength">
+            function <span class="apidocSignatureSpan">twitter-text.</span>getUnicodeTextLength
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.hasInvalidCharacters">
+            function <span class="apidocSignatureSpan">twitter-text.</span>hasInvalidCharacters
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.hitHighlight">
+            function <span class="apidocSignatureSpan">twitter-text.</span>hitHighlight
+            <span class="apidocSignatureSpan">(text, hits, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.htmlEscape">
+            function <span class="apidocSignatureSpan">twitter-text.</span>htmlEscape
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.isInvalidTweet">
+            function <span class="apidocSignatureSpan">twitter-text.</span>isInvalidTweet
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.isValidHashtag">
+            function <span class="apidocSignatureSpan">twitter-text.</span>isValidHashtag
+            <span class="apidocSignatureSpan">(hashtag)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.isValidList">
+            function <span class="apidocSignatureSpan">twitter-text.</span>isValidList
+            <span class="apidocSignatureSpan">(usernameList)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.isValidTweetText">
+            function <span class="apidocSignatureSpan">twitter-text.</span>isValidTweetText
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.isValidUrl">
+            function <span class="apidocSignatureSpan">twitter-text.</span>isValidUrl
+            <span class="apidocSignatureSpan">(url, unicodeDomains, requireProtocol)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.isValidUsername">
+            function <span class="apidocSignatureSpan">twitter-text.</span>isValidUsername
+            <span class="apidocSignatureSpan">(username)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkTextWithEntity">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkTextWithEntity
+            <span class="apidocSignatureSpan">(entity, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkToCashtag">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkToCashtag
+            <span class="apidocSignatureSpan">(entity, text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkToHashtag">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkToHashtag
+            <span class="apidocSignatureSpan">(entity, text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkToMentionAndList">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkToMentionAndList
+            <span class="apidocSignatureSpan">(entity, text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkToText">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkToText
+            <span class="apidocSignatureSpan">(entity, text, attributes, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkToTextWithSymbol">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkToTextWithSymbol
+            <span class="apidocSignatureSpan">(entity, symbol, text, attributes, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkToUrl">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkToUrl
+            <span class="apidocSignatureSpan">(entity, text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.modifyIndicesFromUTF16ToUnicode">
+            function <span class="apidocSignatureSpan">twitter-text.</span>modifyIndicesFromUTF16ToUnicode
+            <span class="apidocSignatureSpan">(text, entities)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.modifyIndicesFromUnicodeToUTF16">
+            function <span class="apidocSignatureSpan">twitter-text.</span>modifyIndicesFromUnicodeToUTF16
+            <span class="apidocSignatureSpan">(text, entities)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.regexSupplant">
+            function <span class="apidocSignatureSpan">twitter-text.</span>regexSupplant
+            <span class="apidocSignatureSpan">(regex, flags)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.removeOverlappingEntities">
+            function <span class="apidocSignatureSpan">twitter-text.</span>removeOverlappingEntities
+            <span class="apidocSignatureSpan">(entities)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.splitTags">
+            function <span class="apidocSignatureSpan">twitter-text.</span>splitTags
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.stringSupplant">
+            function <span class="apidocSignatureSpan">twitter-text.</span>stringSupplant
+            <span class="apidocSignatureSpan">(str, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.tagAttrs">
+            function <span class="apidocSignatureSpan">twitter-text.</span>tagAttrs
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">twitter-text.</span>regexen</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.autoLink">module twitter-text.autoLink</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLink.autoLink">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLink
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.autoLinkCashtags">module twitter-text.autoLinkCashtags</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLinkCashtags.autoLinkCashtags">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkCashtags
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.autoLinkEntities">module twitter-text.autoLinkEntities</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLinkEntities.autoLinkEntities">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkEntities
+            <span class="apidocSignatureSpan">(text, entities, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.autoLinkHashtags">module twitter-text.autoLinkHashtags</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLinkHashtags.autoLinkHashtags">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkHashtags
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.autoLinkUrlsCustom">module twitter-text.autoLinkUrlsCustom</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLinkUrlsCustom.autoLinkUrlsCustom">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkUrlsCustom
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.autoLinkUsernamesOrLists">module twitter-text.autoLinkUsernamesOrLists</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLinkUsernamesOrLists.autoLinkUsernamesOrLists">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkUsernamesOrLists
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.autoLinkWithJSON">module twitter-text.autoLinkWithJSON</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.autoLinkWithJSON.autoLinkWithJSON">
+            function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkWithJSON
+            <span class="apidocSignatureSpan">(text, json, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.convertUnicodeIndices">module twitter-text.convertUnicodeIndices</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.convertUnicodeIndices.convertUnicodeIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>convertUnicodeIndices
+            <span class="apidocSignatureSpan">(text, entities, indicesInUTF16)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.extractCashtags">module twitter-text.extractCashtags</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractCashtags.extractCashtags">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractCashtags
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.extractCashtagsWithIndices">module twitter-text.extractCashtagsWithIndices</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractCashtagsWithIndices.extractCashtagsWithIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractCashtagsWithIndices
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.extractEntitiesWithIndices">module twitter-text.extractEntitiesWithIndices</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractEntitiesWithIndices.extractEntitiesWithIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractEntitiesWithIndices
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.extractHashtags">module twitter-text.extractHashtags</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractHashtags.extractHashtags">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractHashtags
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.extractHashtagsWithIndices">module twitter-text.extractHashtagsWithIndices</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractHashtagsWithIndices.extractHashtagsWithIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractHashtagsWithIndices
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.extractHtmlAttrsFromOptions">module twitter-text.extractHtmlAttrsFromOptions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractHtmlAttrsFromOptions.extractHtmlAttrsFromOptions">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractHtmlAttrsFromOptions
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.extractMentions">module twitter-text.extractMentions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractMentions.extractMentions">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractMentions
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.extractMentionsOrListsWithIndices">module twitter-text.extractMentionsOrListsWithIndices</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractMentionsOrListsWithIndices.extractMentionsOrListsWithIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractMentionsOrListsWithIndices
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.extractMentionsWithIndices">module twitter-text.extractMentionsWithIndices</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractMentionsWithIndices.extractMentionsWithIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractMentionsWithIndices
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.extractReplies">module twitter-text.extractReplies</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractReplies.extractReplies">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractReplies
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.extractUrls">module twitter-text.extractUrls</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractUrls.extractUrls">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractUrls
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.extractUrlsWithIndices">module twitter-text.extractUrlsWithIndices</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.extractUrlsWithIndices.extractUrlsWithIndices">
+            function <span class="apidocSignatureSpan">twitter-text.</span>extractUrlsWithIndices
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.getTweetLength">module twitter-text.getTweetLength</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.getTweetLength.getTweetLength">
+            function <span class="apidocSignatureSpan">twitter-text.</span>getTweetLength
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.getUnicodeTextLength">module twitter-text.getUnicodeTextLength</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.getUnicodeTextLength.getUnicodeTextLength">
+            function <span class="apidocSignatureSpan">twitter-text.</span>getUnicodeTextLength
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.hasInvalidCharacters">module twitter-text.hasInvalidCharacters</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.hasInvalidCharacters.hasInvalidCharacters">
+            function <span class="apidocSignatureSpan">twitter-text.</span>hasInvalidCharacters
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.hitHighlight">module twitter-text.hitHighlight</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.hitHighlight.hitHighlight">
+            function <span class="apidocSignatureSpan">twitter-text.</span>hitHighlight
+            <span class="apidocSignatureSpan">(text, hits, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.htmlEscape">module twitter-text.htmlEscape</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.htmlEscape.htmlEscape">
+            function <span class="apidocSignatureSpan">twitter-text.</span>htmlEscape
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.isInvalidTweet">module twitter-text.isInvalidTweet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.isInvalidTweet.isInvalidTweet">
+            function <span class="apidocSignatureSpan">twitter-text.</span>isInvalidTweet
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.isValidHashtag">module twitter-text.isValidHashtag</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.isValidHashtag.isValidHashtag">
+            function <span class="apidocSignatureSpan">twitter-text.</span>isValidHashtag
+            <span class="apidocSignatureSpan">(hashtag)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.isValidList">module twitter-text.isValidList</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.isValidList.isValidList">
+            function <span class="apidocSignatureSpan">twitter-text.</span>isValidList
+            <span class="apidocSignatureSpan">(usernameList)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.isValidTweetText">module twitter-text.isValidTweetText</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.isValidTweetText.isValidTweetText">
+            function <span class="apidocSignatureSpan">twitter-text.</span>isValidTweetText
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.isValidUrl">module twitter-text.isValidUrl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.isValidUrl.isValidUrl">
+            function <span class="apidocSignatureSpan">twitter-text.</span>isValidUrl
+            <span class="apidocSignatureSpan">(url, unicodeDomains, requireProtocol)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.isValidUsername">module twitter-text.isValidUsername</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.isValidUsername.isValidUsername">
+            function <span class="apidocSignatureSpan">twitter-text.</span>isValidUsername
+            <span class="apidocSignatureSpan">(username)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.linkTextWithEntity">module twitter-text.linkTextWithEntity</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkTextWithEntity.linkTextWithEntity">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkTextWithEntity
+            <span class="apidocSignatureSpan">(entity, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.linkToCashtag">module twitter-text.linkToCashtag</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkToCashtag.linkToCashtag">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkToCashtag
+            <span class="apidocSignatureSpan">(entity, text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.linkToHashtag">module twitter-text.linkToHashtag</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkToHashtag.linkToHashtag">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkToHashtag
+            <span class="apidocSignatureSpan">(entity, text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.linkToMentionAndList">module twitter-text.linkToMentionAndList</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkToMentionAndList.linkToMentionAndList">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkToMentionAndList
+            <span class="apidocSignatureSpan">(entity, text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.linkToText">module twitter-text.linkToText</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkToText.linkToText">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkToText
+            <span class="apidocSignatureSpan">(entity, text, attributes, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.linkToTextWithSymbol">module twitter-text.linkToTextWithSymbol</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkToTextWithSymbol.linkToTextWithSymbol">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkToTextWithSymbol
+            <span class="apidocSignatureSpan">(entity, symbol, text, attributes, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.linkToUrl">module twitter-text.linkToUrl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.linkToUrl.linkToUrl">
+            function <span class="apidocSignatureSpan">twitter-text.</span>linkToUrl
+            <span class="apidocSignatureSpan">(entity, text, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.modifyIndicesFromUTF16ToUnicode">module twitter-text.modifyIndicesFromUTF16ToUnicode</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.modifyIndicesFromUTF16ToUnicode.modifyIndicesFromUTF16ToUnicode">
+            function <span class="apidocSignatureSpan">twitter-text.</span>modifyIndicesFromUTF16ToUnicode
+            <span class="apidocSignatureSpan">(text, entities)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.modifyIndicesFromUnicodeToUTF16">module twitter-text.modifyIndicesFromUnicodeToUTF16</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.modifyIndicesFromUnicodeToUTF16.modifyIndicesFromUnicodeToUTF16">
+            function <span class="apidocSignatureSpan">twitter-text.</span>modifyIndicesFromUnicodeToUTF16
+            <span class="apidocSignatureSpan">(text, entities)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.regexSupplant">module twitter-text.regexSupplant</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.regexSupplant.regexSupplant">
+            function <span class="apidocSignatureSpan">twitter-text.</span>regexSupplant
+            <span class="apidocSignatureSpan">(regex, flags)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.removeOverlappingEntities">module twitter-text.removeOverlappingEntities</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.removeOverlappingEntities.removeOverlappingEntities">
+            function <span class="apidocSignatureSpan">twitter-text.</span>removeOverlappingEntities
+            <span class="apidocSignatureSpan">(entities)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.splitTags">module twitter-text.splitTags</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.splitTags.splitTags">
+            function <span class="apidocSignatureSpan">twitter-text.</span>splitTags
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.stringSupplant">module twitter-text.stringSupplant</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.stringSupplant.stringSupplant">
+            function <span class="apidocSignatureSpan">twitter-text.</span>stringSupplant
+            <span class="apidocSignatureSpan">(str, values)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twitter-text.tagAttrs">module twitter-text.tagAttrs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twitter-text.tagAttrs.tagAttrs">
+            function <span class="apidocSignatureSpan">twitter-text.</span>tagAttrs
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text" id="apidoc.module.twitter-text">module twitter-text</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLink" id="apidoc.element.twitter-text.autoLink">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLink
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLink = function (text, options) {
+  var entities = twttr.txt.extractEntitiesWithIndices(text, {extractUrlsWithoutProtocol: false});
+  return twttr.txt.autoLinkEntities(text, entities, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Install it with: `npm install twitter-text`
+
+The `twttr.txt` namespace is exported, making it available as such:
+
+``` js
+var twitter = require('twitter-text')
+twitter.<span class="apidocCodeKeywordSpan">autoLink</span>(twitter.htmlEscape('#hello &lt; @world &gt;'))
+```
+
+## Extraction Examples
+
+// basic extraction
+var usernames = twttr.txt.extractMentions("Mentioning @twitter and @jack")
+// usernames == ["twitter", "jack"]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLinkCashtags" id="apidoc.element.twitter-text.autoLinkCashtags">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkCashtags
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLinkCashtags = function (text, options) {
+  var entities = twttr.txt.extractCashtagsWithIndices(text);
+  return twttr.txt.autoLinkEntities(text, entities, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLinkEntities" id="apidoc.element.twitter-text.autoLinkEntities">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkEntities
+        <span class="apidocSignatureSpan">(text, entities, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLinkEntities = function (text, entities, options) {
+  options = clone(options || {});
+
+  options.hashtagClass = options.hashtagClass || DEFAULT_HASHTAG_CLASS;
+  options.hashtagUrlBase = options.hashtagUrlBase || "https://twitter.com/#!/search?q=%23";
+  options.cashtagClass = options.cashtagClass || DEFAULT_CASHTAG_CLASS;
+  options.cashtagUrlBase = options.cashtagUrlBase || "https://twitter.com/#!/search?q=%24";
+  options.listClass = options.listClass || DEFAULT_LIST_CLASS;
+  options.usernameClass = options.usernameClass || DEFAULT_USERNAME_CLASS;
+  options.usernameUrlBase = options.usernameUrlBase || "https://twitter.com/";
+  options.listUrlBase = options.listUrlBase || "https://twitter.com/";
+  options.htmlAttrs = twttr.txt.extractHtmlAttrsFromOptions(options);
+  options.invisibleTagAttrs = options.invisibleTagAttrs || "style='position:absolute;left:-9999px;'";
+
+  // remap url entities to hash
+  var urlEntities, i, len;
+  if(options.urlEntities) {
+    urlEntities = {};
+    for(i = 0, len = options.urlEntities.length; i &lt; len; i++) {
+      urlEntities[options.urlEntities[i].url] = options.urlEntities[i];
+    }
+    options.urlEntities = urlEntities;
+  }
+
+  var result = "";
+  var beginIndex = 0;
+
+  // sort entities by start index
+  entities.sort(function(a,b){ return a.indices[0] - b.indices[0]; });
+
+  var nonEntity = options.htmlEscapeNonEntities ? twttr.txt.htmlEscape : function(text) {
+    return text;
+  };
+
+  for (var i = 0; i &lt; entities.length; i++) {
+    var entity = entities[i];
+    result += nonEntity(text.substring(beginIndex, entity.indices[0]));
+
+    if (entity.url) {
+      result += twttr.txt.linkToUrl(entity, text, options);
+    } else if (entity.hashtag) {
+      result += twttr.txt.linkToHashtag(entity, text, options);
+    } else if (entity.screenName) {
+      result += twttr.txt.linkToMentionAndList(entity, text, options);
+    } else if (entity.cashtag) {
+      result += twttr.txt.linkToCashtag(entity, text, options);
+    }
+    beginIndex = entity.indices[1];
+  }
+  result += nonEntity(text.substring(beginIndex, text.length));
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLinkHashtags" id="apidoc.element.twitter-text.autoLinkHashtags">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkHashtags
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLinkHashtags = function (text, options) {
+  var entities = twttr.txt.extractHashtagsWithIndices(text);
+  return twttr.txt.autoLinkEntities(text, entities, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLinkUrlsCustom" id="apidoc.element.twitter-text.autoLinkUrlsCustom">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkUrlsCustom
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLinkUrlsCustom = function (text, options) {
+  var entities = twttr.txt.extractUrlsWithIndices(text, {extractUrlsWithoutProtocol: false});
+  return twttr.txt.autoLinkEntities(text, entities, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLinkUsernamesOrLists" id="apidoc.element.twitter-text.autoLinkUsernamesOrLists">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkUsernamesOrLists
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLinkUsernamesOrLists = function (text, options) {
+  var entities = twttr.txt.extractMentionsOrListsWithIndices(text);
+  return twttr.txt.autoLinkEntities(text, entities, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLinkWithJSON" id="apidoc.element.twitter-text.autoLinkWithJSON">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkWithJSON
+        <span class="apidocSignatureSpan">(text, json, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLinkWithJSON = function (text, json, options) {
+  // map JSON entity to twitter-text entity
+  if (json.user_mentions) {
+    for (var i = 0; i &lt; json.user_mentions.length; i++) {
+      // this is a @mention
+      json.user_mentions[i].screenName = json.user_mentions[i].screen_name;
+    }
+  }
+
+  if (json.hashtags) {
+    for (var i = 0; i &lt; json.hashtags.length; i++) {
+      // this is a #hashtag
+      json.hashtags[i].hashtag = json.hashtags[i].text;
+    }
+  }
+
+  if (json.symbols) {
+    for (var i = 0; i &lt; json.symbols.length; i++) {
+      // this is a $CASH tag
+      json.symbols[i].cashtag = json.symbols[i].text;
+    }
+  }
+
+  // concatenate all entities
+  var entities = [];
+  for (var key in json) {
+    entities = entities.concat(json[key]);
+  }
+
+  // modify indices to UTF-16
+  twttr.txt.modifyIndicesFromUnicodeToUTF16(text, entities);
+
+  return twttr.txt.autoLinkEntities(text, entities, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.convertUnicodeIndices" id="apidoc.element.twitter-text.convertUnicodeIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>convertUnicodeIndices
+        <span class="apidocSignatureSpan">(text, entities, indicesInUTF16)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">convertUnicodeIndices = function (text, entities, indicesInUTF16) {
+  if (entities.length == 0) {
+    return;
+  }
+
+  var charIndex = 0;
+  var codePointIndex = 0;
+
+  // sort entities by start index
+  entities.sort(function(a,b){ return a.indices[0] - b.indices[0]; });
+  var entityIndex = 0;
+  var entity = entities[0];
+
+  while (charIndex &lt; text.length) {
+    if (entity.indices[0] == (indicesInUTF16 ? charIndex : codePointIndex)) {
+      var len = entity.indices[1] - entity.indices[0];
+      entity.indices[0] = indicesInUTF16 ? codePointIndex : charIndex;
+      entity.indices[1] = entity.indices[0] + len;
+
+      entityIndex++;
+      if (entityIndex == entities.length) {
+        // no more entity
+        break;
+      }
+      entity = entities[entityIndex];
+    }
+
+    var c = text.charCodeAt(charIndex);
+    if (0xD800 &lt;= c &amp;&amp; c &lt;= 0xDBFF &amp;&amp; charIndex &lt; text.length - 1) {
+      // Found high surrogate char
+      c = text.charCodeAt(charIndex + 1);
+      if (0xDC00 &lt;= c &amp;&amp; c &lt;= 0xDFFF) {
+        // Found surrogate pair
+        charIndex++;
+      }
+    }
+    codePointIndex++;
+    charIndex++;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractCashtags" id="apidoc.element.twitter-text.extractCashtags">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractCashtags
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractCashtags = function (text) {
+  var cashtagsOnly = [],
+      cashtagsWithIndices = twttr.txt.extractCashtagsWithIndices(text);
+
+  for (var i = 0; i &lt; cashtagsWithIndices.length; i++) {
+    cashtagsOnly.push(cashtagsWithIndices[i].cashtag);
+  }
+
+  return cashtagsOnly;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractCashtagsWithIndices" id="apidoc.element.twitter-text.extractCashtagsWithIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractCashtagsWithIndices
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractCashtagsWithIndices = function (text) {
+  if (!text || text.indexOf("$") == -1) {
+    return [];
+  }
+
+  var tags = [];
+
+  text.replace(twttr.txt.regexen.validCashtag, function(match, before, dollar, cashtag, offset, chunk) {
+    var startPosition = offset + before.length;
+    var endPosition = startPosition + cashtag.length + 1;
+    tags.push({
+      cashtag: cashtag,
+      indices: [startPosition, endPosition]
+    });
+  });
+
+  return tags;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractEntitiesWithIndices" id="apidoc.element.twitter-text.extractEntitiesWithIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractEntitiesWithIndices
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractEntitiesWithIndices = function (text, options) {
+  var entities = twttr.txt.extractUrlsWithIndices(text, options)
+                  .concat(twttr.txt.extractMentionsOrListsWithIndices(text))
+                  .concat(twttr.txt.extractHashtagsWithIndices(text, {checkUrlOverlap: false}))
+                  .concat(twttr.txt.extractCashtagsWithIndices(text));
+
+  if (entities.length == 0) {
+    return [];
+  }
+
+  twttr.txt.removeOverlappingEntities(entities);
+  return entities;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractHashtags" id="apidoc.element.twitter-text.extractHashtags">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractHashtags
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractHashtags = function (text) {
+  var hashtagsOnly = [],
+      hashtagsWithIndices = twttr.txt.extractHashtagsWithIndices(text);
+
+  for (var i = 0; i &lt; hashtagsWithIndices.length; i++) {
+    hashtagsOnly.push(hashtagsWithIndices[i].hashtag);
+  }
+
+  return hashtagsOnly;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractHashtagsWithIndices" id="apidoc.element.twitter-text.extractHashtagsWithIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractHashtagsWithIndices
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractHashtagsWithIndices = function (text, options) {
+  if (!options) {
+    options = {checkUrlOverlap: true};
+  }
+
+  if (!text || !text.match(twttr.txt.regexen.hashSigns)) {
+    return [];
+  }
+
+  var tags = [];
+
+  text.replace(twttr.txt.regexen.validHashtag, function(match, before, hash, hashText, offset, chunk) {
+    var after = chunk.slice(offset + match.length);
+    if (after.match(twttr.txt.regexen.endHashtagMatch))
+      return;
+    var startPosition = offset + before.length;
+    var endPosition = startPosition + hashText.length + 1;
+    tags.push({
+      hashtag: hashText,
+      indices: [startPosition, endPosition]
+    });
+  });
+
+  if (options.checkUrlOverlap) {
+    // also extract URL entities
+    var urls = twttr.txt.extractUrlsWithIndices(text);
+    if (urls.length &gt; 0) {
+      var entities = tags.concat(urls);
+      // remove overlap
+      twttr.txt.removeOverlappingEntities(entities);
+      // only push back hashtags
+      tags = [];
+      for (var i = 0; i &lt; entities.length; i++) {
+        if (entities[i].hashtag) {
+          tags.push(entities[i]);
+        }
+      }
+    }
+  }
+
+  return tags;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractHtmlAttrsFromOptions" id="apidoc.element.twitter-text.extractHtmlAttrsFromOptions">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractHtmlAttrsFromOptions
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractHtmlAttrsFromOptions = function (options) {
+  var htmlAttrs = {};
+  for (var k in options) {
+    var v = options[k];
+    if (OPTIONS_NOT_ATTRIBUTES[k]) continue;
+    if (BOOLEAN_ATTRIBUTES[k]) {
+      v = v ? k : null;
+    }
+    if (v == null) continue;
+    htmlAttrs[k] = v;
+  }
+  return htmlAttrs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractMentions" id="apidoc.element.twitter-text.extractMentions">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractMentions
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractMentions = function (text) {
+  var screenNamesOnly = [],
+      screenNamesWithIndices = twttr.txt.extractMentionsWithIndices(text);
+
+  for (var i = 0; i &lt; screenNamesWithIndices.length; i++) {
+    var screenName = screenNamesWithIndices[i].screenName;
+    screenNamesOnly.push(screenName);
+  }
+
+  return screenNamesOnly;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var twitter = require('twitter-text')
+twitter.autoLink(twitter.htmlEscape('#hello &lt; @world &gt;'))
+```
+
+## Extraction Examples
+
+// basic extraction
+var usernames = twttr.txt.<span class="apidocCodeKeywordSpan">extractMentions</span>("Mentioning @twitter and @jack")
+// usernames == ["twitter", "jack"]
+
+## Auto-linking Examples
+
+twttr.txt.autoLink("link @user, please #request");
+
+twttr.txt.autoLink("link @user, and expand url... http://t.co/0JG5Mcq", {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractMentionsOrListsWithIndices" id="apidoc.element.twitter-text.extractMentionsOrListsWithIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractMentionsOrListsWithIndices
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractMentionsOrListsWithIndices = function (text) {
+  if (!text || !text.match(twttr.txt.regexen.atSigns)) {
+    return [];
+  }
+
+  var possibleNames = [],
+      slashListname;
+
+  text.replace(twttr.txt.regexen.validMentionOrList, function(match, before, atSign, screenName, slashListname, offset, chunk) {
+    var after = chunk.slice(offset + match.length);
+    if (!after.match(twttr.txt.regexen.endMentionMatch)) {
+      slashListname = slashListname || '';
+      var startPosition = offset + before.length;
+      var endPosition = startPosition + screenName.length + slashListname.length + 1;
+      possibleNames.push({
+        screenName: screenName,
+        listSlug: slashListname,
+        indices: [startPosition, endPosition]
+      });
+    }
+  });
+
+  return possibleNames;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractMentionsWithIndices" id="apidoc.element.twitter-text.extractMentionsWithIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractMentionsWithIndices
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractMentionsWithIndices = function (text) {
+  var mentions = [],
+      mentionOrList,
+      mentionsOrLists = twttr.txt.extractMentionsOrListsWithIndices(text);
+
+  for (var i = 0 ; i &lt; mentionsOrLists.length; i++) {
+    mentionOrList = mentionsOrLists[i];
+    if (mentionOrList.listSlug == '') {
+      mentions.push({
+        screenName: mentionOrList.screenName,
+        indices: mentionOrList.indices
+      });
+    }
+  }
+
+  return mentions;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractReplies" id="apidoc.element.twitter-text.extractReplies">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractReplies
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractReplies = function (text) {
+  if (!text) {
+    return null;
+  }
+
+  var possibleScreenName = text.match(twttr.txt.regexen.validReply);
+  if (!possibleScreenName ||
+      RegExp.rightContext.match(twttr.txt.regexen.endMentionMatch)) {
+    return null;
+  }
+
+  return possibleScreenName[1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractUrls" id="apidoc.element.twitter-text.extractUrls">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractUrls
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractUrls = function (text, options) {
+  var urlsOnly = [],
+      urlsWithIndices = twttr.txt.extractUrlsWithIndices(text, options);
+
+  for (var i = 0; i &lt; urlsWithIndices.length; i++) {
+    urlsOnly.push(urlsWithIndices[i].url);
+  }
+
+  return urlsOnly;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractUrlsWithIndices" id="apidoc.element.twitter-text.extractUrlsWithIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractUrlsWithIndices
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractUrlsWithIndices = function (text, options) {
+  if (!options) {
+    options = {extractUrlsWithoutProtocol: true};
+  }
+  if (!text || (options.extractUrlsWithoutProtocol ? !text.match(/\./) : !text.match(/:/))) {
+    return [];
+  }
+
+  var urls = [];
+
+  while (twttr.txt.regexen.extractUrl.exec(text)) {
+    var before = RegExp.$2, url = RegExp.$3, protocol = RegExp.$4, domain = RegExp.$5, path = RegExp.$7;
+    var endPosition = twttr.txt.regexen.extractUrl.lastIndex,
+        startPosition = endPosition - url.length;
+
+    // if protocol is missing and domain contains non-ASCII characters,
+    // extract ASCII-only domains.
+    if (!protocol) {
+      if (!options.extractUrlsWithoutProtocol
+          || before.match(twttr.txt.regexen.invalidUrlWithoutProtocolPrecedingChars)) {
+        continue;
+      }
+      var lastUrl = null,
+          asciiEndPosition = 0;
+      domain.replace(twttr.txt.regexen.validAsciiDomain, function(asciiDomain) {
+        var asciiStartPosition = domain.indexOf(asciiDomain, asciiEndPosition);
+        asciiEndPosition = asciiStartPosition + asciiDomain.length;
+        lastUrl = {
+          url: asciiDomain,
+          indices: [startPosition + asciiStartPosition, startPosition + asciiEndPosition]
+        };
+        if (path
+            || asciiDomain.match(twttr.txt.regexen.validSpecialShortDomain)
+            || !asciiDomain.match(twttr.txt.regexen.invalidShortDomain)) {
+          urls.push(lastUrl);
+        }
+      });
+
+      // no ASCII-only domain found. Skip the entire URL.
+      if (lastUrl == null) {
+        continue;
+      }
+
+      // lastUrl only contains domain. Need to add path and query if they exist.
+      if (path) {
+        lastUrl.url = url.replace(domain, lastUrl.url);
+        lastUrl.indices[1] = endPosition;
+      }
+    } else {
+      // In the case of t.co URLs, don't allow additional path characters.
+      if (url.match(twttr.txt.regexen.validTcoUrl)) {
+        url = RegExp.lastMatch;
+        endPosition = startPosition + url.length;
+      }
+      urls.push({
+        url: url,
+        indices: [startPosition, endPosition]
+      });
+    }
+  }
+
+  return urls;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.getTweetLength" id="apidoc.element.twitter-text.getTweetLength">
+        function <span class="apidocSignatureSpan">twitter-text.</span>getTweetLength
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTweetLength = function (text, options) {
+  if (!options) {
+    options = {
+        // These come from https://api.twitter.com/1.1/help/configuration.json
+        // described by https://dev.twitter.com/rest/reference/get/help/configuration
+        short_url_length: 23,
+        short_url_length_https: 23
+    };
+  }
+  var textLength = twttr.txt.getUnicodeTextLength(text),
+      urlsWithIndices = twttr.txt.extractUrlsWithIndices(text);
+  twttr.txt.modifyIndicesFromUTF16ToUnicode(text, urlsWithIndices);
+
+  for (var i = 0; i &lt; urlsWithIndices.length; i++) {
+    // Subtract the length of the original URL
+    textLength += urlsWithIndices[i].indices[0] - urlsWithIndices[i].indices[1];
+
+    // Add 23 characters for URL starting with https://
+    // http:// URLs still use https://t.co so they are 23 characters as well
+    if (urlsWithIndices[i].url.toLowerCase().match(twttr.txt.regexen.urlHasHttps)) {
+       textLength += options.short_url_length_https;
+    } else {
+      textLength += options.short_url_length;
+    }
+  }
+
+  return textLength;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        ]});
+
+See [Tweet Entities](https://dev.twitter.com/overview/api/entities-in-twitter-objects) for more info getting url entities from Twitter
+'s API.
+
+## Remaining character count example
+
+    var tweet = "This is a test tweet";
+    var remainingCharacters = 140 - twttr.txt.<span class="apidocCodeKeywordSpan">getTweetLength</span>(tweet);
+
+`getTweetLength` returns the computed length of a tweet after taking into consideration t.co URL shortening and non UTF-16 characters
+
+## Usernames
+
+Username extraction and linking matches all valid Twitter usernames but does
+not verify that the username is a valid Twitter account.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.getUnicodeTextLength" id="apidoc.element.twitter-text.getUnicodeTextLength">
+        function <span class="apidocSignatureSpan">twitter-text.</span>getUnicodeTextLength
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUnicodeTextLength = function (text) {
+  return text.replace(twttr.txt.regexen.non_bmp_code_pairs, ' ').length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.hasInvalidCharacters" id="apidoc.element.twitter-text.hasInvalidCharacters">
+        function <span class="apidocSignatureSpan">twitter-text.</span>hasInvalidCharacters
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasInvalidCharacters = function (text) {
+  return twttr.txt.regexen.invalid_chars.test(text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.hitHighlight" id="apidoc.element.twitter-text.hitHighlight">
+        function <span class="apidocSignatureSpan">twitter-text.</span>hitHighlight
+        <span class="apidocSignatureSpan">(text, hits, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hitHighlight = function (text, hits, options) {
+  var defaultHighlightTag = "em";
+
+  hits = hits || [];
+  options = options || {};
+
+  if (hits.length === 0) {
+    return text;
+  }
+
+  var tagName = options.tag || defaultHighlightTag,
+      tags = ["&lt;" + tagName + "&gt;", "&lt;/" + tagName + "&gt;"],
+      chunks = twttr.txt.splitTags(text),
+      i,
+      j,
+      result = "",
+      chunkIndex = 0,
+      chunk = chunks[0],
+      prevChunksLen = 0,
+      chunkCursor = 0,
+      startInChunk = false,
+      chunkChars = chunk,
+      flatHits = [],
+      index,
+      hit,
+      tag,
+      placed,
+      hitSpot;
+
+  for (i = 0; i &lt; hits.length; i += 1) {
+    for (j = 0; j &lt; hits[i].length; j += 1) {
+      flatHits.push(hits[i][j]);
+    }
+  }
+
+  for (index = 0; index &lt; flatHits.length; index += 1) {
+    hit = flatHits[index];
+    tag = tags[index % 2];
+    placed = false;
+
+    while (chunk != null &amp;&amp; hit &gt;= prevChunksLen + chunk.length) {
+      result += chunkChars.slice(chunkCursor);
+      if (startInChunk &amp;&amp; hit === prevChunksLen + chunkChars.length) {
+        result += tag;
+        placed = true;
+      }
+
+      if (chunks[chunkIndex + 1]) {
+        result += "&lt;" + chunks[chunkIndex + 1] + "&gt;";
+      }
+
+      prevChunksLen += chunkChars.length;
+      chunkCursor = 0;
+      chunkIndex += 2;
+      chunk = chunks[chunkIndex];
+      chunkChars = chunk;
+      startInChunk = false;
+    }
+
+    if (!placed &amp;&amp; chunk != null) {
+      hitSpot = hit - prevChunksLen;
+      result += chunkChars.slice(chunkCursor, hitSpot) + tag;
+      chunkCursor = hitSpot;
+      if (index % 2 === 0) {
+        startInChunk = true;
+      } else {
+        startInChunk = false;
+      }
+    } else if(!placed) {
+      placed = true;
+      result += tag;
+    }
+  }
+
+  if (chunk != null) {
+    if (chunkCursor &lt; chunkChars.length) {
+      result += chunkChars.slice(chunkCursor);
+    }
+    for (index = chunkIndex + 1; index &lt; chunks.length; index += 1) {
+      result += (index % 2 === 0 ? chunks[index] : "&lt;" + chunks[index] + "&gt;");
+    }
+  }
+
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.htmlEscape" id="apidoc.element.twitter-text.htmlEscape">
+        function <span class="apidocSignatureSpan">twitter-text.</span>htmlEscape
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">htmlEscape = function (text) {
+  return text &amp;&amp; text.replace(/[&amp;"'&gt;&lt;]/g, function(character) {
+    return HTML_ENTITIES[character];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Install it with: `npm install twitter-text`
+
+The `twttr.txt` namespace is exported, making it available as such:
+
+``` js
+var twitter = require('twitter-text')
+twitter.autoLink(twitter.<span class="apidocCodeKeywordSpan">htmlEscape</span>('#hello &lt; @world &gt;'))
+```
+
+## Extraction Examples
+
+// basic extraction
+var usernames = twttr.txt.extractMentions("Mentioning @twitter and @jack")
+// usernames == ["twitter", "jack"]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.isInvalidTweet" id="apidoc.element.twitter-text.isInvalidTweet">
+        function <span class="apidocSignatureSpan">twitter-text.</span>isInvalidTweet
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isInvalidTweet = function (text) {
+  if (!text) {
+    return "empty";
+  }
+
+  // Determine max length independent of URL length
+  if (twttr.txt.getTweetLength(text) &gt; MAX_LENGTH) {
+    return "too_long";
+  }
+
+  if (twttr.txt.hasInvalidCharacters(text)) {
+    return "invalid_characters";
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.isValidHashtag" id="apidoc.element.twitter-text.isValidHashtag">
+        function <span class="apidocSignatureSpan">twitter-text.</span>isValidHashtag
+        <span class="apidocSignatureSpan">(hashtag)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidHashtag = function (hashtag) {
+  if (!hashtag) {
+    return false;
+  }
+
+  var extracted = twttr.txt.extractHashtags(hashtag);
+
+  // Should extract the hashtag minus the # sign, hence the .slice(1)
+  return extracted.length === 1 &amp;&amp; extracted[0] === hashtag.slice(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.isValidList" id="apidoc.element.twitter-text.isValidList">
+        function <span class="apidocSignatureSpan">twitter-text.</span>isValidList
+        <span class="apidocSignatureSpan">(usernameList)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidList = function (usernameList) {
+  var match = usernameList.match(VALID_LIST_RE);
+
+  // Must have matched and had nothing before or after
+  return !!(match &amp;&amp; match[1] == "" &amp;&amp; match[4]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.isValidTweetText" id="apidoc.element.twitter-text.isValidTweetText">
+        function <span class="apidocSignatureSpan">twitter-text.</span>isValidTweetText
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidTweetText = function (text) {
+  return !twttr.txt.isInvalidTweet(text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.isValidUrl" id="apidoc.element.twitter-text.isValidUrl">
+        function <span class="apidocSignatureSpan">twitter-text.</span>isValidUrl
+        <span class="apidocSignatureSpan">(url, unicodeDomains, requireProtocol)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidUrl = function (url, unicodeDomains, requireProtocol) {
+  if (unicodeDomains == null) {
+    unicodeDomains = true;
+  }
+
+  if (requireProtocol == null) {
+    requireProtocol = true;
+  }
+
+  if (!url) {
+    return false;
+  }
+
+  var urlParts = url.match(twttr.txt.regexen.validateUrlUnencoded);
+
+  if (!urlParts || urlParts[0] !== url) {
+    return false;
+  }
+
+  var scheme = urlParts[1],
+      authority = urlParts[2],
+      path = urlParts[3],
+      query = urlParts[4],
+      fragment = urlParts[5];
+
+  if (!(
+    (!requireProtocol || (isValidMatch(scheme, twttr.txt.regexen.validateUrlScheme) &amp;&amp; scheme.match(/^https?$/i))) &amp;&amp;
+    isValidMatch(path, twttr.txt.regexen.validateUrlPath) &amp;&amp;
+    isValidMatch(query, twttr.txt.regexen.validateUrlQuery, true) &amp;&amp;
+    isValidMatch(fragment, twttr.txt.regexen.validateUrlFragment, true)
+  )) {
+    return false;
+  }
+
+  return (unicodeDomains &amp;&amp; isValidMatch(authority, twttr.txt.regexen.validateUrlUnicodeAuthority)) ||
+         (!unicodeDomains &amp;&amp; isValidMatch(authority, twttr.txt.regexen.validateUrlAuthority));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.isValidUsername" id="apidoc.element.twitter-text.isValidUsername">
+        function <span class="apidocSignatureSpan">twitter-text.</span>isValidUsername
+        <span class="apidocSignatureSpan">(username)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidUsername = function (username) {
+  if (!username) {
+    return false;
+  }
+
+  var extracted = twttr.txt.extractMentions(username);
+
+  // Should extract the username minus the @ sign, hence the .slice(1)
+  return extracted.length === 1 &amp;&amp; extracted[0] === username.slice(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkTextWithEntity" id="apidoc.element.twitter-text.linkTextWithEntity">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkTextWithEntity
+        <span class="apidocSignatureSpan">(entity, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkTextWithEntity = function (entity, options) {
+  var displayUrl = entity.display_url;
+  var expandedUrl = entity.expanded_url;
+
+  // Goal: If a user copies and pastes a tweet containing t.co'ed link, the resulting paste
+  // should contain the full original URL (expanded_url), not the display URL.
+  //
+  // Method: Whenever possible, we actually emit HTML that contains expanded_url, and use
+  // font-size:0 to hide those parts that should not be displayed (because they are not part of display_url).
+  // Elements with font-size:0 get copied even though they are not visible.
+  // Note that display:none doesn't work here. Elements with display:none don't get copied.
+  //
+  // Additionally, we want to *display* ellipses, but we don't want them copied.  To make this happen we
+  // wrap the ellipses in a tco-ellipsis class and provide an onCopy handler that sets display:none on
+  // everything with the tco-ellipsis class.
+  //
+  // Exception: pic.twitter.com images, for which expandedUrl = "https://twitter.com/#!/username/status/1234/photo/1
+  // For those URLs, display_url is not a substring of expanded_url, so we don't do anything special to render the elided parts.
+  // For a pic.twitter.com URL, the only elided part will be the "https://", so this is fine.
+
+  var displayUrlSansEllipses = displayUrl.replace(/â€¦/g, ""); // We have to disregard ellipses for matching
+  // Note: we currently only support eliding parts of the URL at the beginning or the end.
+  // Eventually we may want to elide parts of the URL in the *middle*.  If so, this code will
+  // become more complicated.  We will probably want to create a regexp out of display URL,
+  // replacing every ellipsis with a ".*".
+  if (expandedUrl.indexOf(displayUrlSansEllipses) != -1) {
+    var displayUrlIndex = expandedUrl.indexOf(displayUrlSansEllipses);
+    var v = {
+      displayUrlSansEllipses: displayUrlSansEllipses,
+      // Portion of expandedUrl that precedes the displayUrl substring
+      beforeDisplayUrl: expandedUrl.substr(0, displayUrlIndex),
+      // Portion of expandedUrl that comes after displayUrl
+      afterDisplayUrl: expandedUrl.substr(displayUrlIndex + displayUrlSansEllipses.length),
+      precedingEllipsis: displayUrl.match(/^â€¦/) ? "â€¦" : "",
+      followingEllipsis: displayUrl.match(/â€¦$/) ? "â€¦" : ""
+    };
+    for (var k in v) {
+      if (v.hasOwnProperty(k)) {
+        v[k] = twttr.txt.htmlEscape(v[k]);
+      }
+    }
+    // As an example: The user tweets "hi http://longdomainname.com/foo"
+    // This gets shortened to "hi http://t.co/xyzabc", with display_url = "â€¦nname.com/foo"
+    // This will get rendered as:
+    // &lt;span class='tco-ellipsis'&gt; &lt;!-- This stuff should get displayed but not copied --&gt;
+    //   â€¦
+    //   &lt;!-- There's a chance the onCopy event handler might not fire. In case that happens,
+    //        we include an &amp;nbsp; here so that the â€¦ doesn't bump up against the URL and ruin it.
+    //        The &amp;nbsp; is inside the tco-ellipsis span so that when the onCopy handler *does*
+    //        fire, it doesn't get copied.  Otherwise the copied text would have two spaces in a row,
+    //        e.g. "hi  http://longdomainname.com/foo".
+    //   &lt;span style='font-size:0'&gt;&amp;nbsp;&lt;/span&gt;
+    // &lt;/span&gt;
+    // &lt;span style='font-size:0'&gt;  &lt;!-- This stuff should get copied but not displayed --&gt;
+    //   http://longdomai
+    // &lt;/span&gt;
+    // &lt;span class='js-display-url'&gt; &lt;!-- This stuff should get displayed *and* copied --&gt;
+    //   nname.com/foo
+    // &lt;/span&gt;
+    // &lt;span class='tco-ellipsis'&gt; &lt;!-- This stuff should get displayed but not copied --&gt;
+    //   &lt;span style='font-size:0'&gt;&amp;nbsp;&lt;/span&gt;
+    //   â€¦
+    // &lt;/span&gt;
+    v['invisible'] = options.invisibleTagAttrs;
+    return stringSupplant("&lt;span class='tco-ellipsis'&gt;#{precedingEllipsis}&lt;span #{invisible}&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span #{invisible
+}&gt;#{beforeDisplayUrl}&lt;/span&gt;&lt;span class='js-display-url'&gt;#{displayUrlSansEllipses}&lt;/span&gt;&lt;span #{invisible}&gt;#{afterDisplayUrl}&lt;/
+span&gt;&lt;span class='tco-ellipsis'&gt;&lt;span #{invisible}&gt;&amp;nbsp;&lt;/span&gt;#{followingEllipsis}&lt;/span&gt;", v);
+  }
+  return displayUrl;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkToCashtag" id="apidoc.element.twitter-text.linkToCashtag">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkToCashtag
+        <span class="apidocSignatureSpan">(entity, text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkToCashtag = function (entity, text, options) {
+  var cashtag = twttr.txt.htmlEscape(entity.cashtag);
+  var attrs = clone(options.htmlAttrs || {});
+  attrs.href = options.cashtagUrlBase + cashtag;
+  attrs.title = "$" + cashtag;
+  attrs["class"] =  options.cashtagClass;
+  if (options.targetBlank) {
+    attrs.target = '_blank';
+  }
+
+  return twttr.txt.linkToTextWithSymbol(entity, "$", cashtag, attrs, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkToHashtag" id="apidoc.element.twitter-text.linkToHashtag">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkToHashtag
+        <span class="apidocSignatureSpan">(entity, text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkToHashtag = function (entity, text, options) {
+  var hash = text.substring(entity.indices[0], entity.indices[0] + 1);
+  var hashtag = twttr.txt.htmlEscape(entity.hashtag);
+  var attrs = clone(options.htmlAttrs || {});
+  attrs.href = options.hashtagUrlBase + hashtag;
+  attrs.title = "#" + hashtag;
+  attrs["class"] = options.hashtagClass;
+  if (hashtag.charAt(0).match(twttr.txt.regexen.rtl_chars)){
+    attrs["class"] += " rtl";
+  }
+  if (options.targetBlank) {
+    attrs.target = '_blank';
+  }
+
+  return twttr.txt.linkToTextWithSymbol(entity, hash, hashtag, attrs, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkToMentionAndList" id="apidoc.element.twitter-text.linkToMentionAndList">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkToMentionAndList
+        <span class="apidocSignatureSpan">(entity, text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkToMentionAndList = function (entity, text, options) {
+  var at = text.substring(entity.indices[0], entity.indices[0] + 1);
+  var user = twttr.txt.htmlEscape(entity.screenName);
+  var slashListname = twttr.txt.htmlEscape(entity.listSlug);
+  var isList = entity.listSlug &amp;&amp; !options.suppressLists;
+  var attrs = clone(options.htmlAttrs || {});
+  attrs["class"] = (isList ? options.listClass : options.usernameClass);
+  attrs.href = isList ? options.listUrlBase + user + slashListname : options.usernameUrlBase + user;
+  if (!isList &amp;&amp; !options.suppressDataScreenName) {
+    attrs['data-screen-name'] = user;
+  }
+  if (options.targetBlank) {
+    attrs.target = '_blank';
+  }
+
+  return twttr.txt.linkToTextWithSymbol(entity, at, isList ? user + slashListname : user, attrs, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkToText" id="apidoc.element.twitter-text.linkToText">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkToText
+        <span class="apidocSignatureSpan">(entity, text, attributes, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkToText = function (entity, text, attributes, options) {
+  if (!options.suppressNoFollow) {
+    attributes.rel = "nofollow";
+  }
+  // if linkAttributeBlock is specified, call it to modify the attributes
+  if (options.linkAttributeBlock) {
+    options.linkAttributeBlock(entity, attributes);
+  }
+  // if linkTextBlock is specified, call it to get a new/modified link text
+  if (options.linkTextBlock) {
+    text = options.linkTextBlock(entity, text);
+  }
+  var d = {
+    text: text,
+    attr: twttr.txt.tagAttrs(attributes)
+  };
+  return stringSupplant("&lt;a#{attr}&gt;#{text}&lt;/a&gt;", d);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkToTextWithSymbol" id="apidoc.element.twitter-text.linkToTextWithSymbol">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkToTextWithSymbol
+        <span class="apidocSignatureSpan">(entity, symbol, text, attributes, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkToTextWithSymbol = function (entity, symbol, text, attributes, options) {
+  var taggedSymbol = options.symbolTag ? "&lt;" + options.symbolTag + "&gt;" + symbol + "&lt;/"+ options.symbolTag + "&gt;" : symbol;
+  text = twttr.txt.htmlEscape(text);
+  var taggedText = options.textWithSymbolTag ? "&lt;" + options.textWithSymbolTag + "&gt;" + text + "&lt;/"+ options.textWithSymbolTag + "&gt;" :
+text;
+
+  if (options.usernameIncludeSymbol || !symbol.match(twttr.txt.regexen.atSigns)) {
+    return twttr.txt.linkToText(entity, taggedSymbol + taggedText, attributes, options);
+  } else {
+    return taggedSymbol + twttr.txt.linkToText(entity, taggedText, attributes, options);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkToUrl" id="apidoc.element.twitter-text.linkToUrl">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkToUrl
+        <span class="apidocSignatureSpan">(entity, text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkToUrl = function (entity, text, options) {
+  var url = entity.url;
+  var displayUrl = url;
+  var linkText = twttr.txt.htmlEscape(displayUrl);
+
+  // If the caller passed a urlEntities object (provided by a Twitter API
+  // response with include_entities=true), we use that to render the display_url
+  // for each URL instead of it's underlying t.co URL.
+  var urlEntity = (options.urlEntities &amp;&amp; options.urlEntities[url]) || entity;
+  if (urlEntity.display_url) {
+    linkText = twttr.txt.linkTextWithEntity(urlEntity, options);
+  }
+
+  var attrs = clone(options.htmlAttrs || {});
+
+  if (!url.match(twttr.txt.regexen.urlHasProtocol)) {
+    url = "http://" + url;
+  }
+  attrs.href = url;
+
+  if (options.targetBlank) {
+    attrs.target = '_blank';
+  }
+
+  // set class only if urlClass is specified.
+  if (options.urlClass) {
+    attrs["class"] = options.urlClass;
+  }
+
+  // set target only if urlTarget is specified.
+  if (options.urlTarget) {
+    attrs.target = options.urlTarget;
+  }
+
+  if (!options.title &amp;&amp; urlEntity.display_url) {
+    attrs.title = urlEntity.expanded_url;
+  }
+
+  return twttr.txt.linkToText(entity, linkText, attrs, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.modifyIndicesFromUTF16ToUnicode" id="apidoc.element.twitter-text.modifyIndicesFromUTF16ToUnicode">
+        function <span class="apidocSignatureSpan">twitter-text.</span>modifyIndicesFromUTF16ToUnicode
+        <span class="apidocSignatureSpan">(text, entities)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">modifyIndicesFromUTF16ToUnicode = function (text, entities) {
+  twttr.txt.convertUnicodeIndices(text, entities, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.modifyIndicesFromUnicodeToUTF16" id="apidoc.element.twitter-text.modifyIndicesFromUnicodeToUTF16">
+        function <span class="apidocSignatureSpan">twitter-text.</span>modifyIndicesFromUnicodeToUTF16
+        <span class="apidocSignatureSpan">(text, entities)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">modifyIndicesFromUnicodeToUTF16 = function (text, entities) {
+  twttr.txt.convertUnicodeIndices(text, entities, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.regexSupplant" id="apidoc.element.twitter-text.regexSupplant">
+        function <span class="apidocSignatureSpan">twitter-text.</span>regexSupplant
+        <span class="apidocSignatureSpan">(regex, flags)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function regexSupplant(regex, flags) {
+  flags = flags || "";
+  if (typeof regex !== "string") {
+    if (regex.global &amp;&amp; flags.indexOf("g") &lt; 0) {
+      flags += "g";
+    }
+    if (regex.ignoreCase &amp;&amp; flags.indexOf("i") &lt; 0) {
+      flags += "i";
+    }
+    if (regex.multiline &amp;&amp; flags.indexOf("m") &lt; 0) {
+      flags += "m";
+    }
+
+    regex = regex.source;
+  }
+
+  return new RegExp(regex.replace(/#\{(\w+)\}/g, function(match, name) {
+    var newRegex = twttr.txt.regexen[name] || "";
+    if (typeof newRegex !== "string") {
+      newRegex = newRegex.source;
+    }
+    return newRegex;
+  }), flags);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.removeOverlappingEntities" id="apidoc.element.twitter-text.removeOverlappingEntities">
+        function <span class="apidocSignatureSpan">twitter-text.</span>removeOverlappingEntities
+        <span class="apidocSignatureSpan">(entities)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeOverlappingEntities = function (entities) {
+  entities.sort(function(a,b){ return a.indices[0] - b.indices[0]; });
+
+  var prev = entities[0];
+  for (var i = 1; i &lt; entities.length; i++) {
+    if (prev.indices[1] &gt; entities[i].indices[0]) {
+      entities.splice(i, 1);
+      i--;
+    } else {
+      prev = entities[i];
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.splitTags" id="apidoc.element.twitter-text.splitTags">
+        function <span class="apidocSignatureSpan">twitter-text.</span>splitTags
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">splitTags = function (text) {
+  var firstSplits = text.split("&lt;"),
+      secondSplits,
+      allSplits = [],
+      split;
+
+  for (var i = 0; i &lt; firstSplits.length; i += 1) {
+    split = firstSplits[i];
+    if (!split) {
+      allSplits.push("");
+    } else {
+      secondSplits = split.split("&gt;");
+      for (var j = 0; j &lt; secondSplits.length; j += 1) {
+        allSplits.push(secondSplits[j]);
+      }
+    }
+  }
+
+  return allSplits;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.stringSupplant" id="apidoc.element.twitter-text.stringSupplant">
+        function <span class="apidocSignatureSpan">twitter-text.</span>stringSupplant
+        <span class="apidocSignatureSpan">(str, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stringSupplant(str, values) {
+  return str.replace(/#\{(\w+)\}/g, function(match, name) {
+    return values[name] || "";
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.tagAttrs" id="apidoc.element.twitter-text.tagAttrs">
+        function <span class="apidocSignatureSpan">twitter-text.</span>tagAttrs
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tagAttrs = function (attributes) {
+  var htmlAttrs = "";
+  for (var k in attributes) {
+    var v = attributes[k];
+    if (BOOLEAN_ATTRIBUTES[k]) {
+      v = v ? k : null;
+    }
+    if (v == null) continue;
+    htmlAttrs += " " + twttr.txt.htmlEscape(k) + "=\"" + twttr.txt.htmlEscape(v.toString()) + "\"";
+  }
+  return htmlAttrs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.autoLink" id="apidoc.module.twitter-text.autoLink">module twitter-text.autoLink</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLink.autoLink" id="apidoc.element.twitter-text.autoLink.autoLink">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLink
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLink = function (text, options) {
+  var entities = twttr.txt.extractEntitiesWithIndices(text, {extractUrlsWithoutProtocol: false});
+  return twttr.txt.autoLinkEntities(text, entities, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Install it with: `npm install twitter-text`
+
+The `twttr.txt` namespace is exported, making it available as such:
+
+``` js
+var twitter = require('twitter-text')
+twitter.<span class="apidocCodeKeywordSpan">autoLink</span>(twitter.htmlEscape('#hello &lt; @world &gt;'))
+```
+
+## Extraction Examples
+
+// basic extraction
+var usernames = twttr.txt.extractMentions("Mentioning @twitter and @jack")
+// usernames == ["twitter", "jack"]
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.autoLinkCashtags" id="apidoc.module.twitter-text.autoLinkCashtags">module twitter-text.autoLinkCashtags</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLinkCashtags.autoLinkCashtags" id="apidoc.element.twitter-text.autoLinkCashtags.autoLinkCashtags">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkCashtags
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLinkCashtags = function (text, options) {
+  var entities = twttr.txt.extractCashtagsWithIndices(text);
+  return twttr.txt.autoLinkEntities(text, entities, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.autoLinkEntities" id="apidoc.module.twitter-text.autoLinkEntities">module twitter-text.autoLinkEntities</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLinkEntities.autoLinkEntities" id="apidoc.element.twitter-text.autoLinkEntities.autoLinkEntities">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkEntities
+        <span class="apidocSignatureSpan">(text, entities, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLinkEntities = function (text, entities, options) {
+  options = clone(options || {});
+
+  options.hashtagClass = options.hashtagClass || DEFAULT_HASHTAG_CLASS;
+  options.hashtagUrlBase = options.hashtagUrlBase || "https://twitter.com/#!/search?q=%23";
+  options.cashtagClass = options.cashtagClass || DEFAULT_CASHTAG_CLASS;
+  options.cashtagUrlBase = options.cashtagUrlBase || "https://twitter.com/#!/search?q=%24";
+  options.listClass = options.listClass || DEFAULT_LIST_CLASS;
+  options.usernameClass = options.usernameClass || DEFAULT_USERNAME_CLASS;
+  options.usernameUrlBase = options.usernameUrlBase || "https://twitter.com/";
+  options.listUrlBase = options.listUrlBase || "https://twitter.com/";
+  options.htmlAttrs = twttr.txt.extractHtmlAttrsFromOptions(options);
+  options.invisibleTagAttrs = options.invisibleTagAttrs || "style='position:absolute;left:-9999px;'";
+
+  // remap url entities to hash
+  var urlEntities, i, len;
+  if(options.urlEntities) {
+    urlEntities = {};
+    for(i = 0, len = options.urlEntities.length; i &lt; len; i++) {
+      urlEntities[options.urlEntities[i].url] = options.urlEntities[i];
+    }
+    options.urlEntities = urlEntities;
+  }
+
+  var result = "";
+  var beginIndex = 0;
+
+  // sort entities by start index
+  entities.sort(function(a,b){ return a.indices[0] - b.indices[0]; });
+
+  var nonEntity = options.htmlEscapeNonEntities ? twttr.txt.htmlEscape : function(text) {
+    return text;
+  };
+
+  for (var i = 0; i &lt; entities.length; i++) {
+    var entity = entities[i];
+    result += nonEntity(text.substring(beginIndex, entity.indices[0]));
+
+    if (entity.url) {
+      result += twttr.txt.linkToUrl(entity, text, options);
+    } else if (entity.hashtag) {
+      result += twttr.txt.linkToHashtag(entity, text, options);
+    } else if (entity.screenName) {
+      result += twttr.txt.linkToMentionAndList(entity, text, options);
+    } else if (entity.cashtag) {
+      result += twttr.txt.linkToCashtag(entity, text, options);
+    }
+    beginIndex = entity.indices[1];
+  }
+  result += nonEntity(text.substring(beginIndex, text.length));
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.autoLinkHashtags" id="apidoc.module.twitter-text.autoLinkHashtags">module twitter-text.autoLinkHashtags</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLinkHashtags.autoLinkHashtags" id="apidoc.element.twitter-text.autoLinkHashtags.autoLinkHashtags">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkHashtags
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLinkHashtags = function (text, options) {
+  var entities = twttr.txt.extractHashtagsWithIndices(text);
+  return twttr.txt.autoLinkEntities(text, entities, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.autoLinkUrlsCustom" id="apidoc.module.twitter-text.autoLinkUrlsCustom">module twitter-text.autoLinkUrlsCustom</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLinkUrlsCustom.autoLinkUrlsCustom" id="apidoc.element.twitter-text.autoLinkUrlsCustom.autoLinkUrlsCustom">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkUrlsCustom
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLinkUrlsCustom = function (text, options) {
+  var entities = twttr.txt.extractUrlsWithIndices(text, {extractUrlsWithoutProtocol: false});
+  return twttr.txt.autoLinkEntities(text, entities, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.autoLinkUsernamesOrLists" id="apidoc.module.twitter-text.autoLinkUsernamesOrLists">module twitter-text.autoLinkUsernamesOrLists</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLinkUsernamesOrLists.autoLinkUsernamesOrLists" id="apidoc.element.twitter-text.autoLinkUsernamesOrLists.autoLinkUsernamesOrLists">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkUsernamesOrLists
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLinkUsernamesOrLists = function (text, options) {
+  var entities = twttr.txt.extractMentionsOrListsWithIndices(text);
+  return twttr.txt.autoLinkEntities(text, entities, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.autoLinkWithJSON" id="apidoc.module.twitter-text.autoLinkWithJSON">module twitter-text.autoLinkWithJSON</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.autoLinkWithJSON.autoLinkWithJSON" id="apidoc.element.twitter-text.autoLinkWithJSON.autoLinkWithJSON">
+        function <span class="apidocSignatureSpan">twitter-text.</span>autoLinkWithJSON
+        <span class="apidocSignatureSpan">(text, json, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autoLinkWithJSON = function (text, json, options) {
+  // map JSON entity to twitter-text entity
+  if (json.user_mentions) {
+    for (var i = 0; i &lt; json.user_mentions.length; i++) {
+      // this is a @mention
+      json.user_mentions[i].screenName = json.user_mentions[i].screen_name;
+    }
+  }
+
+  if (json.hashtags) {
+    for (var i = 0; i &lt; json.hashtags.length; i++) {
+      // this is a #hashtag
+      json.hashtags[i].hashtag = json.hashtags[i].text;
+    }
+  }
+
+  if (json.symbols) {
+    for (var i = 0; i &lt; json.symbols.length; i++) {
+      // this is a $CASH tag
+      json.symbols[i].cashtag = json.symbols[i].text;
+    }
+  }
+
+  // concatenate all entities
+  var entities = [];
+  for (var key in json) {
+    entities = entities.concat(json[key]);
+  }
+
+  // modify indices to UTF-16
+  twttr.txt.modifyIndicesFromUnicodeToUTF16(text, entities);
+
+  return twttr.txt.autoLinkEntities(text, entities, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.convertUnicodeIndices" id="apidoc.module.twitter-text.convertUnicodeIndices">module twitter-text.convertUnicodeIndices</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.convertUnicodeIndices.convertUnicodeIndices" id="apidoc.element.twitter-text.convertUnicodeIndices.convertUnicodeIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>convertUnicodeIndices
+        <span class="apidocSignatureSpan">(text, entities, indicesInUTF16)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">convertUnicodeIndices = function (text, entities, indicesInUTF16) {
+  if (entities.length == 0) {
+    return;
+  }
+
+  var charIndex = 0;
+  var codePointIndex = 0;
+
+  // sort entities by start index
+  entities.sort(function(a,b){ return a.indices[0] - b.indices[0]; });
+  var entityIndex = 0;
+  var entity = entities[0];
+
+  while (charIndex &lt; text.length) {
+    if (entity.indices[0] == (indicesInUTF16 ? charIndex : codePointIndex)) {
+      var len = entity.indices[1] - entity.indices[0];
+      entity.indices[0] = indicesInUTF16 ? codePointIndex : charIndex;
+      entity.indices[1] = entity.indices[0] + len;
+
+      entityIndex++;
+      if (entityIndex == entities.length) {
+        // no more entity
+        break;
+      }
+      entity = entities[entityIndex];
+    }
+
+    var c = text.charCodeAt(charIndex);
+    if (0xD800 &lt;= c &amp;&amp; c &lt;= 0xDBFF &amp;&amp; charIndex &lt; text.length - 1) {
+      // Found high surrogate char
+      c = text.charCodeAt(charIndex + 1);
+      if (0xDC00 &lt;= c &amp;&amp; c &lt;= 0xDFFF) {
+        // Found surrogate pair
+        charIndex++;
+      }
+    }
+    codePointIndex++;
+    charIndex++;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.extractCashtags" id="apidoc.module.twitter-text.extractCashtags">module twitter-text.extractCashtags</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractCashtags.extractCashtags" id="apidoc.element.twitter-text.extractCashtags.extractCashtags">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractCashtags
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractCashtags = function (text) {
+  var cashtagsOnly = [],
+      cashtagsWithIndices = twttr.txt.extractCashtagsWithIndices(text);
+
+  for (var i = 0; i &lt; cashtagsWithIndices.length; i++) {
+    cashtagsOnly.push(cashtagsWithIndices[i].cashtag);
+  }
+
+  return cashtagsOnly;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.extractCashtagsWithIndices" id="apidoc.module.twitter-text.extractCashtagsWithIndices">module twitter-text.extractCashtagsWithIndices</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractCashtagsWithIndices.extractCashtagsWithIndices" id="apidoc.element.twitter-text.extractCashtagsWithIndices.extractCashtagsWithIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractCashtagsWithIndices
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractCashtagsWithIndices = function (text) {
+  if (!text || text.indexOf("$") == -1) {
+    return [];
+  }
+
+  var tags = [];
+
+  text.replace(twttr.txt.regexen.validCashtag, function(match, before, dollar, cashtag, offset, chunk) {
+    var startPosition = offset + before.length;
+    var endPosition = startPosition + cashtag.length + 1;
+    tags.push({
+      cashtag: cashtag,
+      indices: [startPosition, endPosition]
+    });
+  });
+
+  return tags;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.extractEntitiesWithIndices" id="apidoc.module.twitter-text.extractEntitiesWithIndices">module twitter-text.extractEntitiesWithIndices</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractEntitiesWithIndices.extractEntitiesWithIndices" id="apidoc.element.twitter-text.extractEntitiesWithIndices.extractEntitiesWithIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractEntitiesWithIndices
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractEntitiesWithIndices = function (text, options) {
+  var entities = twttr.txt.extractUrlsWithIndices(text, options)
+                  .concat(twttr.txt.extractMentionsOrListsWithIndices(text))
+                  .concat(twttr.txt.extractHashtagsWithIndices(text, {checkUrlOverlap: false}))
+                  .concat(twttr.txt.extractCashtagsWithIndices(text));
+
+  if (entities.length == 0) {
+    return [];
+  }
+
+  twttr.txt.removeOverlappingEntities(entities);
+  return entities;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.extractHashtags" id="apidoc.module.twitter-text.extractHashtags">module twitter-text.extractHashtags</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractHashtags.extractHashtags" id="apidoc.element.twitter-text.extractHashtags.extractHashtags">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractHashtags
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractHashtags = function (text) {
+  var hashtagsOnly = [],
+      hashtagsWithIndices = twttr.txt.extractHashtagsWithIndices(text);
+
+  for (var i = 0; i &lt; hashtagsWithIndices.length; i++) {
+    hashtagsOnly.push(hashtagsWithIndices[i].hashtag);
+  }
+
+  return hashtagsOnly;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.extractHashtagsWithIndices" id="apidoc.module.twitter-text.extractHashtagsWithIndices">module twitter-text.extractHashtagsWithIndices</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractHashtagsWithIndices.extractHashtagsWithIndices" id="apidoc.element.twitter-text.extractHashtagsWithIndices.extractHashtagsWithIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractHashtagsWithIndices
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractHashtagsWithIndices = function (text, options) {
+  if (!options) {
+    options = {checkUrlOverlap: true};
+  }
+
+  if (!text || !text.match(twttr.txt.regexen.hashSigns)) {
+    return [];
+  }
+
+  var tags = [];
+
+  text.replace(twttr.txt.regexen.validHashtag, function(match, before, hash, hashText, offset, chunk) {
+    var after = chunk.slice(offset + match.length);
+    if (after.match(twttr.txt.regexen.endHashtagMatch))
+      return;
+    var startPosition = offset + before.length;
+    var endPosition = startPosition + hashText.length + 1;
+    tags.push({
+      hashtag: hashText,
+      indices: [startPosition, endPosition]
+    });
+  });
+
+  if (options.checkUrlOverlap) {
+    // also extract URL entities
+    var urls = twttr.txt.extractUrlsWithIndices(text);
+    if (urls.length &gt; 0) {
+      var entities = tags.concat(urls);
+      // remove overlap
+      twttr.txt.removeOverlappingEntities(entities);
+      // only push back hashtags
+      tags = [];
+      for (var i = 0; i &lt; entities.length; i++) {
+        if (entities[i].hashtag) {
+          tags.push(entities[i]);
+        }
+      }
+    }
+  }
+
+  return tags;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.extractHtmlAttrsFromOptions" id="apidoc.module.twitter-text.extractHtmlAttrsFromOptions">module twitter-text.extractHtmlAttrsFromOptions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractHtmlAttrsFromOptions.extractHtmlAttrsFromOptions" id="apidoc.element.twitter-text.extractHtmlAttrsFromOptions.extractHtmlAttrsFromOptions">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractHtmlAttrsFromOptions
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractHtmlAttrsFromOptions = function (options) {
+  var htmlAttrs = {};
+  for (var k in options) {
+    var v = options[k];
+    if (OPTIONS_NOT_ATTRIBUTES[k]) continue;
+    if (BOOLEAN_ATTRIBUTES[k]) {
+      v = v ? k : null;
+    }
+    if (v == null) continue;
+    htmlAttrs[k] = v;
+  }
+  return htmlAttrs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.extractMentions" id="apidoc.module.twitter-text.extractMentions">module twitter-text.extractMentions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractMentions.extractMentions" id="apidoc.element.twitter-text.extractMentions.extractMentions">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractMentions
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractMentions = function (text) {
+  var screenNamesOnly = [],
+      screenNamesWithIndices = twttr.txt.extractMentionsWithIndices(text);
+
+  for (var i = 0; i &lt; screenNamesWithIndices.length; i++) {
+    var screenName = screenNamesWithIndices[i].screenName;
+    screenNamesOnly.push(screenName);
+  }
+
+  return screenNamesOnly;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var twitter = require('twitter-text')
+twitter.autoLink(twitter.htmlEscape('#hello &lt; @world &gt;'))
+```
+
+## Extraction Examples
+
+// basic extraction
+var usernames = twttr.txt.<span class="apidocCodeKeywordSpan">extractMentions</span>("Mentioning @twitter and @jack")
+// usernames == ["twitter", "jack"]
+
+## Auto-linking Examples
+
+twttr.txt.autoLink("link @user, please #request");
+
+twttr.txt.autoLink("link @user, and expand url... http://t.co/0JG5Mcq", {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.extractMentionsOrListsWithIndices" id="apidoc.module.twitter-text.extractMentionsOrListsWithIndices">module twitter-text.extractMentionsOrListsWithIndices</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractMentionsOrListsWithIndices.extractMentionsOrListsWithIndices" id="apidoc.element.twitter-text.extractMentionsOrListsWithIndices.extractMentionsOrListsWithIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractMentionsOrListsWithIndices
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractMentionsOrListsWithIndices = function (text) {
+  if (!text || !text.match(twttr.txt.regexen.atSigns)) {
+    return [];
+  }
+
+  var possibleNames = [],
+      slashListname;
+
+  text.replace(twttr.txt.regexen.validMentionOrList, function(match, before, atSign, screenName, slashListname, offset, chunk) {
+    var after = chunk.slice(offset + match.length);
+    if (!after.match(twttr.txt.regexen.endMentionMatch)) {
+      slashListname = slashListname || '';
+      var startPosition = offset + before.length;
+      var endPosition = startPosition + screenName.length + slashListname.length + 1;
+      possibleNames.push({
+        screenName: screenName,
+        listSlug: slashListname,
+        indices: [startPosition, endPosition]
+      });
+    }
+  });
+
+  return possibleNames;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.extractMentionsWithIndices" id="apidoc.module.twitter-text.extractMentionsWithIndices">module twitter-text.extractMentionsWithIndices</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractMentionsWithIndices.extractMentionsWithIndices" id="apidoc.element.twitter-text.extractMentionsWithIndices.extractMentionsWithIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractMentionsWithIndices
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractMentionsWithIndices = function (text) {
+  var mentions = [],
+      mentionOrList,
+      mentionsOrLists = twttr.txt.extractMentionsOrListsWithIndices(text);
+
+  for (var i = 0 ; i &lt; mentionsOrLists.length; i++) {
+    mentionOrList = mentionsOrLists[i];
+    if (mentionOrList.listSlug == '') {
+      mentions.push({
+        screenName: mentionOrList.screenName,
+        indices: mentionOrList.indices
+      });
+    }
+  }
+
+  return mentions;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.extractReplies" id="apidoc.module.twitter-text.extractReplies">module twitter-text.extractReplies</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractReplies.extractReplies" id="apidoc.element.twitter-text.extractReplies.extractReplies">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractReplies
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractReplies = function (text) {
+  if (!text) {
+    return null;
+  }
+
+  var possibleScreenName = text.match(twttr.txt.regexen.validReply);
+  if (!possibleScreenName ||
+      RegExp.rightContext.match(twttr.txt.regexen.endMentionMatch)) {
+    return null;
+  }
+
+  return possibleScreenName[1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.extractUrls" id="apidoc.module.twitter-text.extractUrls">module twitter-text.extractUrls</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractUrls.extractUrls" id="apidoc.element.twitter-text.extractUrls.extractUrls">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractUrls
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractUrls = function (text, options) {
+  var urlsOnly = [],
+      urlsWithIndices = twttr.txt.extractUrlsWithIndices(text, options);
+
+  for (var i = 0; i &lt; urlsWithIndices.length; i++) {
+    urlsOnly.push(urlsWithIndices[i].url);
+  }
+
+  return urlsOnly;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.extractUrlsWithIndices" id="apidoc.module.twitter-text.extractUrlsWithIndices">module twitter-text.extractUrlsWithIndices</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.extractUrlsWithIndices.extractUrlsWithIndices" id="apidoc.element.twitter-text.extractUrlsWithIndices.extractUrlsWithIndices">
+        function <span class="apidocSignatureSpan">twitter-text.</span>extractUrlsWithIndices
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractUrlsWithIndices = function (text, options) {
+  if (!options) {
+    options = {extractUrlsWithoutProtocol: true};
+  }
+  if (!text || (options.extractUrlsWithoutProtocol ? !text.match(/\./) : !text.match(/:/))) {
+    return [];
+  }
+
+  var urls = [];
+
+  while (twttr.txt.regexen.extractUrl.exec(text)) {
+    var before = RegExp.$2, url = RegExp.$3, protocol = RegExp.$4, domain = RegExp.$5, path = RegExp.$7;
+    var endPosition = twttr.txt.regexen.extractUrl.lastIndex,
+        startPosition = endPosition - url.length;
+
+    // if protocol is missing and domain contains non-ASCII characters,
+    // extract ASCII-only domains.
+    if (!protocol) {
+      if (!options.extractUrlsWithoutProtocol
+          || before.match(twttr.txt.regexen.invalidUrlWithoutProtocolPrecedingChars)) {
+        continue;
+      }
+      var lastUrl = null,
+          asciiEndPosition = 0;
+      domain.replace(twttr.txt.regexen.validAsciiDomain, function(asciiDomain) {
+        var asciiStartPosition = domain.indexOf(asciiDomain, asciiEndPosition);
+        asciiEndPosition = asciiStartPosition + asciiDomain.length;
+        lastUrl = {
+          url: asciiDomain,
+          indices: [startPosition + asciiStartPosition, startPosition + asciiEndPosition]
+        };
+        if (path
+            || asciiDomain.match(twttr.txt.regexen.validSpecialShortDomain)
+            || !asciiDomain.match(twttr.txt.regexen.invalidShortDomain)) {
+          urls.push(lastUrl);
+        }
+      });
+
+      // no ASCII-only domain found. Skip the entire URL.
+      if (lastUrl == null) {
+        continue;
+      }
+
+      // lastUrl only contains domain. Need to add path and query if they exist.
+      if (path) {
+        lastUrl.url = url.replace(domain, lastUrl.url);
+        lastUrl.indices[1] = endPosition;
+      }
+    } else {
+      // In the case of t.co URLs, don't allow additional path characters.
+      if (url.match(twttr.txt.regexen.validTcoUrl)) {
+        url = RegExp.lastMatch;
+        endPosition = startPosition + url.length;
+      }
+      urls.push({
+        url: url,
+        indices: [startPosition, endPosition]
+      });
+    }
+  }
+
+  return urls;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.getTweetLength" id="apidoc.module.twitter-text.getTweetLength">module twitter-text.getTweetLength</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.getTweetLength.getTweetLength" id="apidoc.element.twitter-text.getTweetLength.getTweetLength">
+        function <span class="apidocSignatureSpan">twitter-text.</span>getTweetLength
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTweetLength = function (text, options) {
+  if (!options) {
+    options = {
+        // These come from https://api.twitter.com/1.1/help/configuration.json
+        // described by https://dev.twitter.com/rest/reference/get/help/configuration
+        short_url_length: 23,
+        short_url_length_https: 23
+    };
+  }
+  var textLength = twttr.txt.getUnicodeTextLength(text),
+      urlsWithIndices = twttr.txt.extractUrlsWithIndices(text);
+  twttr.txt.modifyIndicesFromUTF16ToUnicode(text, urlsWithIndices);
+
+  for (var i = 0; i &lt; urlsWithIndices.length; i++) {
+    // Subtract the length of the original URL
+    textLength += urlsWithIndices[i].indices[0] - urlsWithIndices[i].indices[1];
+
+    // Add 23 characters for URL starting with https://
+    // http:// URLs still use https://t.co so they are 23 characters as well
+    if (urlsWithIndices[i].url.toLowerCase().match(twttr.txt.regexen.urlHasHttps)) {
+       textLength += options.short_url_length_https;
+    } else {
+      textLength += options.short_url_length;
+    }
+  }
+
+  return textLength;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        ]});
+
+See [Tweet Entities](https://dev.twitter.com/overview/api/entities-in-twitter-objects) for more info getting url entities from Twitter
+'s API.
+
+## Remaining character count example
+
+    var tweet = "This is a test tweet";
+    var remainingCharacters = 140 - twttr.txt.<span class="apidocCodeKeywordSpan">getTweetLength</span>(tweet);
+
+`getTweetLength` returns the computed length of a tweet after taking into consideration t.co URL shortening and non UTF-16 characters
+
+## Usernames
+
+Username extraction and linking matches all valid Twitter usernames but does
+not verify that the username is a valid Twitter account.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.getUnicodeTextLength" id="apidoc.module.twitter-text.getUnicodeTextLength">module twitter-text.getUnicodeTextLength</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.getUnicodeTextLength.getUnicodeTextLength" id="apidoc.element.twitter-text.getUnicodeTextLength.getUnicodeTextLength">
+        function <span class="apidocSignatureSpan">twitter-text.</span>getUnicodeTextLength
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUnicodeTextLength = function (text) {
+  return text.replace(twttr.txt.regexen.non_bmp_code_pairs, ' ').length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.hasInvalidCharacters" id="apidoc.module.twitter-text.hasInvalidCharacters">module twitter-text.hasInvalidCharacters</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.hasInvalidCharacters.hasInvalidCharacters" id="apidoc.element.twitter-text.hasInvalidCharacters.hasInvalidCharacters">
+        function <span class="apidocSignatureSpan">twitter-text.</span>hasInvalidCharacters
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasInvalidCharacters = function (text) {
+  return twttr.txt.regexen.invalid_chars.test(text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.hitHighlight" id="apidoc.module.twitter-text.hitHighlight">module twitter-text.hitHighlight</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.hitHighlight.hitHighlight" id="apidoc.element.twitter-text.hitHighlight.hitHighlight">
+        function <span class="apidocSignatureSpan">twitter-text.</span>hitHighlight
+        <span class="apidocSignatureSpan">(text, hits, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hitHighlight = function (text, hits, options) {
+  var defaultHighlightTag = "em";
+
+  hits = hits || [];
+  options = options || {};
+
+  if (hits.length === 0) {
+    return text;
+  }
+
+  var tagName = options.tag || defaultHighlightTag,
+      tags = ["&lt;" + tagName + "&gt;", "&lt;/" + tagName + "&gt;"],
+      chunks = twttr.txt.splitTags(text),
+      i,
+      j,
+      result = "",
+      chunkIndex = 0,
+      chunk = chunks[0],
+      prevChunksLen = 0,
+      chunkCursor = 0,
+      startInChunk = false,
+      chunkChars = chunk,
+      flatHits = [],
+      index,
+      hit,
+      tag,
+      placed,
+      hitSpot;
+
+  for (i = 0; i &lt; hits.length; i += 1) {
+    for (j = 0; j &lt; hits[i].length; j += 1) {
+      flatHits.push(hits[i][j]);
+    }
+  }
+
+  for (index = 0; index &lt; flatHits.length; index += 1) {
+    hit = flatHits[index];
+    tag = tags[index % 2];
+    placed = false;
+
+    while (chunk != null &amp;&amp; hit &gt;= prevChunksLen + chunk.length) {
+      result += chunkChars.slice(chunkCursor);
+      if (startInChunk &amp;&amp; hit === prevChunksLen + chunkChars.length) {
+        result += tag;
+        placed = true;
+      }
+
+      if (chunks[chunkIndex + 1]) {
+        result += "&lt;" + chunks[chunkIndex + 1] + "&gt;";
+      }
+
+      prevChunksLen += chunkChars.length;
+      chunkCursor = 0;
+      chunkIndex += 2;
+      chunk = chunks[chunkIndex];
+      chunkChars = chunk;
+      startInChunk = false;
+    }
+
+    if (!placed &amp;&amp; chunk != null) {
+      hitSpot = hit - prevChunksLen;
+      result += chunkChars.slice(chunkCursor, hitSpot) + tag;
+      chunkCursor = hitSpot;
+      if (index % 2 === 0) {
+        startInChunk = true;
+      } else {
+        startInChunk = false;
+      }
+    } else if(!placed) {
+      placed = true;
+      result += tag;
+    }
+  }
+
+  if (chunk != null) {
+    if (chunkCursor &lt; chunkChars.length) {
+      result += chunkChars.slice(chunkCursor);
+    }
+    for (index = chunkIndex + 1; index &lt; chunks.length; index += 1) {
+      result += (index % 2 === 0 ? chunks[index] : "&lt;" + chunks[index] + "&gt;");
+    }
+  }
+
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.htmlEscape" id="apidoc.module.twitter-text.htmlEscape">module twitter-text.htmlEscape</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.htmlEscape.htmlEscape" id="apidoc.element.twitter-text.htmlEscape.htmlEscape">
+        function <span class="apidocSignatureSpan">twitter-text.</span>htmlEscape
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">htmlEscape = function (text) {
+  return text &amp;&amp; text.replace(/[&amp;"'&gt;&lt;]/g, function(character) {
+    return HTML_ENTITIES[character];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Install it with: `npm install twitter-text`
+
+The `twttr.txt` namespace is exported, making it available as such:
+
+``` js
+var twitter = require('twitter-text')
+twitter.autoLink(twitter.<span class="apidocCodeKeywordSpan">htmlEscape</span>('#hello &lt; @world &gt;'))
+```
+
+## Extraction Examples
+
+// basic extraction
+var usernames = twttr.txt.extractMentions("Mentioning @twitter and @jack")
+// usernames == ["twitter", "jack"]
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.isInvalidTweet" id="apidoc.module.twitter-text.isInvalidTweet">module twitter-text.isInvalidTweet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.isInvalidTweet.isInvalidTweet" id="apidoc.element.twitter-text.isInvalidTweet.isInvalidTweet">
+        function <span class="apidocSignatureSpan">twitter-text.</span>isInvalidTweet
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isInvalidTweet = function (text) {
+  if (!text) {
+    return "empty";
+  }
+
+  // Determine max length independent of URL length
+  if (twttr.txt.getTweetLength(text) &gt; MAX_LENGTH) {
+    return "too_long";
+  }
+
+  if (twttr.txt.hasInvalidCharacters(text)) {
+    return "invalid_characters";
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.isValidHashtag" id="apidoc.module.twitter-text.isValidHashtag">module twitter-text.isValidHashtag</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.isValidHashtag.isValidHashtag" id="apidoc.element.twitter-text.isValidHashtag.isValidHashtag">
+        function <span class="apidocSignatureSpan">twitter-text.</span>isValidHashtag
+        <span class="apidocSignatureSpan">(hashtag)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidHashtag = function (hashtag) {
+  if (!hashtag) {
+    return false;
+  }
+
+  var extracted = twttr.txt.extractHashtags(hashtag);
+
+  // Should extract the hashtag minus the # sign, hence the .slice(1)
+  return extracted.length === 1 &amp;&amp; extracted[0] === hashtag.slice(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.isValidList" id="apidoc.module.twitter-text.isValidList">module twitter-text.isValidList</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.isValidList.isValidList" id="apidoc.element.twitter-text.isValidList.isValidList">
+        function <span class="apidocSignatureSpan">twitter-text.</span>isValidList
+        <span class="apidocSignatureSpan">(usernameList)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidList = function (usernameList) {
+  var match = usernameList.match(VALID_LIST_RE);
+
+  // Must have matched and had nothing before or after
+  return !!(match &amp;&amp; match[1] == "" &amp;&amp; match[4]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.isValidTweetText" id="apidoc.module.twitter-text.isValidTweetText">module twitter-text.isValidTweetText</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.isValidTweetText.isValidTweetText" id="apidoc.element.twitter-text.isValidTweetText.isValidTweetText">
+        function <span class="apidocSignatureSpan">twitter-text.</span>isValidTweetText
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidTweetText = function (text) {
+  return !twttr.txt.isInvalidTweet(text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.isValidUrl" id="apidoc.module.twitter-text.isValidUrl">module twitter-text.isValidUrl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.isValidUrl.isValidUrl" id="apidoc.element.twitter-text.isValidUrl.isValidUrl">
+        function <span class="apidocSignatureSpan">twitter-text.</span>isValidUrl
+        <span class="apidocSignatureSpan">(url, unicodeDomains, requireProtocol)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidUrl = function (url, unicodeDomains, requireProtocol) {
+  if (unicodeDomains == null) {
+    unicodeDomains = true;
+  }
+
+  if (requireProtocol == null) {
+    requireProtocol = true;
+  }
+
+  if (!url) {
+    return false;
+  }
+
+  var urlParts = url.match(twttr.txt.regexen.validateUrlUnencoded);
+
+  if (!urlParts || urlParts[0] !== url) {
+    return false;
+  }
+
+  var scheme = urlParts[1],
+      authority = urlParts[2],
+      path = urlParts[3],
+      query = urlParts[4],
+      fragment = urlParts[5];
+
+  if (!(
+    (!requireProtocol || (isValidMatch(scheme, twttr.txt.regexen.validateUrlScheme) &amp;&amp; scheme.match(/^https?$/i))) &amp;&amp;
+    isValidMatch(path, twttr.txt.regexen.validateUrlPath) &amp;&amp;
+    isValidMatch(query, twttr.txt.regexen.validateUrlQuery, true) &amp;&amp;
+    isValidMatch(fragment, twttr.txt.regexen.validateUrlFragment, true)
+  )) {
+    return false;
+  }
+
+  return (unicodeDomains &amp;&amp; isValidMatch(authority, twttr.txt.regexen.validateUrlUnicodeAuthority)) ||
+         (!unicodeDomains &amp;&amp; isValidMatch(authority, twttr.txt.regexen.validateUrlAuthority));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.isValidUsername" id="apidoc.module.twitter-text.isValidUsername">module twitter-text.isValidUsername</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.isValidUsername.isValidUsername" id="apidoc.element.twitter-text.isValidUsername.isValidUsername">
+        function <span class="apidocSignatureSpan">twitter-text.</span>isValidUsername
+        <span class="apidocSignatureSpan">(username)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidUsername = function (username) {
+  if (!username) {
+    return false;
+  }
+
+  var extracted = twttr.txt.extractMentions(username);
+
+  // Should extract the username minus the @ sign, hence the .slice(1)
+  return extracted.length === 1 &amp;&amp; extracted[0] === username.slice(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.linkTextWithEntity" id="apidoc.module.twitter-text.linkTextWithEntity">module twitter-text.linkTextWithEntity</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkTextWithEntity.linkTextWithEntity" id="apidoc.element.twitter-text.linkTextWithEntity.linkTextWithEntity">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkTextWithEntity
+        <span class="apidocSignatureSpan">(entity, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkTextWithEntity = function (entity, options) {
+  var displayUrl = entity.display_url;
+  var expandedUrl = entity.expanded_url;
+
+  // Goal: If a user copies and pastes a tweet containing t.co'ed link, the resulting paste
+  // should contain the full original URL (expanded_url), not the display URL.
+  //
+  // Method: Whenever possible, we actually emit HTML that contains expanded_url, and use
+  // font-size:0 to hide those parts that should not be displayed (because they are not part of display_url).
+  // Elements with font-size:0 get copied even though they are not visible.
+  // Note that display:none doesn't work here. Elements with display:none don't get copied.
+  //
+  // Additionally, we want to *display* ellipses, but we don't want them copied.  To make this happen we
+  // wrap the ellipses in a tco-ellipsis class and provide an onCopy handler that sets display:none on
+  // everything with the tco-ellipsis class.
+  //
+  // Exception: pic.twitter.com images, for which expandedUrl = "https://twitter.com/#!/username/status/1234/photo/1
+  // For those URLs, display_url is not a substring of expanded_url, so we don't do anything special to render the elided parts.
+  // For a pic.twitter.com URL, the only elided part will be the "https://", so this is fine.
+
+  var displayUrlSansEllipses = displayUrl.replace(/â€¦/g, ""); // We have to disregard ellipses for matching
+  // Note: we currently only support eliding parts of the URL at the beginning or the end.
+  // Eventually we may want to elide parts of the URL in the *middle*.  If so, this code will
+  // become more complicated.  We will probably want to create a regexp out of display URL,
+  // replacing every ellipsis with a ".*".
+  if (expandedUrl.indexOf(displayUrlSansEllipses) != -1) {
+    var displayUrlIndex = expandedUrl.indexOf(displayUrlSansEllipses);
+    var v = {
+      displayUrlSansEllipses: displayUrlSansEllipses,
+      // Portion of expandedUrl that precedes the displayUrl substring
+      beforeDisplayUrl: expandedUrl.substr(0, displayUrlIndex),
+      // Portion of expandedUrl that comes after displayUrl
+      afterDisplayUrl: expandedUrl.substr(displayUrlIndex + displayUrlSansEllipses.length),
+      precedingEllipsis: displayUrl.match(/^â€¦/) ? "â€¦" : "",
+      followingEllipsis: displayUrl.match(/â€¦$/) ? "â€¦" : ""
+    };
+    for (var k in v) {
+      if (v.hasOwnProperty(k)) {
+        v[k] = twttr.txt.htmlEscape(v[k]);
+      }
+    }
+    // As an example: The user tweets "hi http://longdomainname.com/foo"
+    // This gets shortened to "hi http://t.co/xyzabc", with display_url = "â€¦nname.com/foo"
+    // This will get rendered as:
+    // &lt;span class='tco-ellipsis'&gt; &lt;!-- This stuff should get displayed but not copied --&gt;
+    //   â€¦
+    //   &lt;!-- There's a chance the onCopy event handler might not fire. In case that happens,
+    //        we include an &amp;nbsp; here so that the â€¦ doesn't bump up against the URL and ruin it.
+    //        The &amp;nbsp; is inside the tco-ellipsis span so that when the onCopy handler *does*
+    //        fire, it doesn't get copied.  Otherwise the copied text would have two spaces in a row,
+    //        e.g. "hi  http://longdomainname.com/foo".
+    //   &lt;span style='font-size:0'&gt;&amp;nbsp;&lt;/span&gt;
+    // &lt;/span&gt;
+    // &lt;span style='font-size:0'&gt;  &lt;!-- This stuff should get copied but not displayed --&gt;
+    //   http://longdomai
+    // &lt;/span&gt;
+    // &lt;span class='js-display-url'&gt; &lt;!-- This stuff should get displayed *and* copied --&gt;
+    //   nname.com/foo
+    // &lt;/span&gt;
+    // &lt;span class='tco-ellipsis'&gt; &lt;!-- This stuff should get displayed but not copied --&gt;
+    //   &lt;span style='font-size:0'&gt;&amp;nbsp;&lt;/span&gt;
+    //   â€¦
+    // &lt;/span&gt;
+    v['invisible'] = options.invisibleTagAttrs;
+    return stringSupplant("&lt;span class='tco-ellipsis'&gt;#{precedingEllipsis}&lt;span #{invisible}&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span #{invisible
+}&gt;#{beforeDisplayUrl}&lt;/span&gt;&lt;span class='js-display-url'&gt;#{displayUrlSansEllipses}&lt;/span&gt;&lt;span #{invisible}&gt;#{afterDisplayUrl}&lt;/
+span&gt;&lt;span class='tco-ellipsis'&gt;&lt;span #{invisible}&gt;&amp;nbsp;&lt;/span&gt;#{followingEllipsis}&lt;/span&gt;", v);
+  }
+  return displayUrl;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.linkToCashtag" id="apidoc.module.twitter-text.linkToCashtag">module twitter-text.linkToCashtag</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkToCashtag.linkToCashtag" id="apidoc.element.twitter-text.linkToCashtag.linkToCashtag">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkToCashtag
+        <span class="apidocSignatureSpan">(entity, text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkToCashtag = function (entity, text, options) {
+  var cashtag = twttr.txt.htmlEscape(entity.cashtag);
+  var attrs = clone(options.htmlAttrs || {});
+  attrs.href = options.cashtagUrlBase + cashtag;
+  attrs.title = "$" + cashtag;
+  attrs["class"] =  options.cashtagClass;
+  if (options.targetBlank) {
+    attrs.target = '_blank';
+  }
+
+  return twttr.txt.linkToTextWithSymbol(entity, "$", cashtag, attrs, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.linkToHashtag" id="apidoc.module.twitter-text.linkToHashtag">module twitter-text.linkToHashtag</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkToHashtag.linkToHashtag" id="apidoc.element.twitter-text.linkToHashtag.linkToHashtag">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkToHashtag
+        <span class="apidocSignatureSpan">(entity, text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkToHashtag = function (entity, text, options) {
+  var hash = text.substring(entity.indices[0], entity.indices[0] + 1);
+  var hashtag = twttr.txt.htmlEscape(entity.hashtag);
+  var attrs = clone(options.htmlAttrs || {});
+  attrs.href = options.hashtagUrlBase + hashtag;
+  attrs.title = "#" + hashtag;
+  attrs["class"] = options.hashtagClass;
+  if (hashtag.charAt(0).match(twttr.txt.regexen.rtl_chars)){
+    attrs["class"] += " rtl";
+  }
+  if (options.targetBlank) {
+    attrs.target = '_blank';
+  }
+
+  return twttr.txt.linkToTextWithSymbol(entity, hash, hashtag, attrs, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.linkToMentionAndList" id="apidoc.module.twitter-text.linkToMentionAndList">module twitter-text.linkToMentionAndList</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkToMentionAndList.linkToMentionAndList" id="apidoc.element.twitter-text.linkToMentionAndList.linkToMentionAndList">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkToMentionAndList
+        <span class="apidocSignatureSpan">(entity, text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkToMentionAndList = function (entity, text, options) {
+  var at = text.substring(entity.indices[0], entity.indices[0] + 1);
+  var user = twttr.txt.htmlEscape(entity.screenName);
+  var slashListname = twttr.txt.htmlEscape(entity.listSlug);
+  var isList = entity.listSlug &amp;&amp; !options.suppressLists;
+  var attrs = clone(options.htmlAttrs || {});
+  attrs["class"] = (isList ? options.listClass : options.usernameClass);
+  attrs.href = isList ? options.listUrlBase + user + slashListname : options.usernameUrlBase + user;
+  if (!isList &amp;&amp; !options.suppressDataScreenName) {
+    attrs['data-screen-name'] = user;
+  }
+  if (options.targetBlank) {
+    attrs.target = '_blank';
+  }
+
+  return twttr.txt.linkToTextWithSymbol(entity, at, isList ? user + slashListname : user, attrs, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.linkToText" id="apidoc.module.twitter-text.linkToText">module twitter-text.linkToText</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkToText.linkToText" id="apidoc.element.twitter-text.linkToText.linkToText">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkToText
+        <span class="apidocSignatureSpan">(entity, text, attributes, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkToText = function (entity, text, attributes, options) {
+  if (!options.suppressNoFollow) {
+    attributes.rel = "nofollow";
+  }
+  // if linkAttributeBlock is specified, call it to modify the attributes
+  if (options.linkAttributeBlock) {
+    options.linkAttributeBlock(entity, attributes);
+  }
+  // if linkTextBlock is specified, call it to get a new/modified link text
+  if (options.linkTextBlock) {
+    text = options.linkTextBlock(entity, text);
+  }
+  var d = {
+    text: text,
+    attr: twttr.txt.tagAttrs(attributes)
+  };
+  return stringSupplant("&lt;a#{attr}&gt;#{text}&lt;/a&gt;", d);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.linkToTextWithSymbol" id="apidoc.module.twitter-text.linkToTextWithSymbol">module twitter-text.linkToTextWithSymbol</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkToTextWithSymbol.linkToTextWithSymbol" id="apidoc.element.twitter-text.linkToTextWithSymbol.linkToTextWithSymbol">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkToTextWithSymbol
+        <span class="apidocSignatureSpan">(entity, symbol, text, attributes, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkToTextWithSymbol = function (entity, symbol, text, attributes, options) {
+  var taggedSymbol = options.symbolTag ? "&lt;" + options.symbolTag + "&gt;" + symbol + "&lt;/"+ options.symbolTag + "&gt;" : symbol;
+  text = twttr.txt.htmlEscape(text);
+  var taggedText = options.textWithSymbolTag ? "&lt;" + options.textWithSymbolTag + "&gt;" + text + "&lt;/"+ options.textWithSymbolTag + "&gt;" :
+text;
+
+  if (options.usernameIncludeSymbol || !symbol.match(twttr.txt.regexen.atSigns)) {
+    return twttr.txt.linkToText(entity, taggedSymbol + taggedText, attributes, options);
+  } else {
+    return taggedSymbol + twttr.txt.linkToText(entity, taggedText, attributes, options);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.linkToUrl" id="apidoc.module.twitter-text.linkToUrl">module twitter-text.linkToUrl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.linkToUrl.linkToUrl" id="apidoc.element.twitter-text.linkToUrl.linkToUrl">
+        function <span class="apidocSignatureSpan">twitter-text.</span>linkToUrl
+        <span class="apidocSignatureSpan">(entity, text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">linkToUrl = function (entity, text, options) {
+  var url = entity.url;
+  var displayUrl = url;
+  var linkText = twttr.txt.htmlEscape(displayUrl);
+
+  // If the caller passed a urlEntities object (provided by a Twitter API
+  // response with include_entities=true), we use that to render the display_url
+  // for each URL instead of it's underlying t.co URL.
+  var urlEntity = (options.urlEntities &amp;&amp; options.urlEntities[url]) || entity;
+  if (urlEntity.display_url) {
+    linkText = twttr.txt.linkTextWithEntity(urlEntity, options);
+  }
+
+  var attrs = clone(options.htmlAttrs || {});
+
+  if (!url.match(twttr.txt.regexen.urlHasProtocol)) {
+    url = "http://" + url;
+  }
+  attrs.href = url;
+
+  if (options.targetBlank) {
+    attrs.target = '_blank';
+  }
+
+  // set class only if urlClass is specified.
+  if (options.urlClass) {
+    attrs["class"] = options.urlClass;
+  }
+
+  // set target only if urlTarget is specified.
+  if (options.urlTarget) {
+    attrs.target = options.urlTarget;
+  }
+
+  if (!options.title &amp;&amp; urlEntity.display_url) {
+    attrs.title = urlEntity.expanded_url;
+  }
+
+  return twttr.txt.linkToText(entity, linkText, attrs, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.modifyIndicesFromUTF16ToUnicode" id="apidoc.module.twitter-text.modifyIndicesFromUTF16ToUnicode">module twitter-text.modifyIndicesFromUTF16ToUnicode</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.modifyIndicesFromUTF16ToUnicode.modifyIndicesFromUTF16ToUnicode" id="apidoc.element.twitter-text.modifyIndicesFromUTF16ToUnicode.modifyIndicesFromUTF16ToUnicode">
+        function <span class="apidocSignatureSpan">twitter-text.</span>modifyIndicesFromUTF16ToUnicode
+        <span class="apidocSignatureSpan">(text, entities)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">modifyIndicesFromUTF16ToUnicode = function (text, entities) {
+  twttr.txt.convertUnicodeIndices(text, entities, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.modifyIndicesFromUnicodeToUTF16" id="apidoc.module.twitter-text.modifyIndicesFromUnicodeToUTF16">module twitter-text.modifyIndicesFromUnicodeToUTF16</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.modifyIndicesFromUnicodeToUTF16.modifyIndicesFromUnicodeToUTF16" id="apidoc.element.twitter-text.modifyIndicesFromUnicodeToUTF16.modifyIndicesFromUnicodeToUTF16">
+        function <span class="apidocSignatureSpan">twitter-text.</span>modifyIndicesFromUnicodeToUTF16
+        <span class="apidocSignatureSpan">(text, entities)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">modifyIndicesFromUnicodeToUTF16 = function (text, entities) {
+  twttr.txt.convertUnicodeIndices(text, entities, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.regexSupplant" id="apidoc.module.twitter-text.regexSupplant">module twitter-text.regexSupplant</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.regexSupplant.regexSupplant" id="apidoc.element.twitter-text.regexSupplant.regexSupplant">
+        function <span class="apidocSignatureSpan">twitter-text.</span>regexSupplant
+        <span class="apidocSignatureSpan">(regex, flags)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function regexSupplant(regex, flags) {
+  flags = flags || "";
+  if (typeof regex !== "string") {
+    if (regex.global &amp;&amp; flags.indexOf("g") &lt; 0) {
+      flags += "g";
+    }
+    if (regex.ignoreCase &amp;&amp; flags.indexOf("i") &lt; 0) {
+      flags += "i";
+    }
+    if (regex.multiline &amp;&amp; flags.indexOf("m") &lt; 0) {
+      flags += "m";
+    }
+
+    regex = regex.source;
+  }
+
+  return new RegExp(regex.replace(/#\{(\w+)\}/g, function(match, name) {
+    var newRegex = twttr.txt.regexen[name] || "";
+    if (typeof newRegex !== "string") {
+      newRegex = newRegex.source;
+    }
+    return newRegex;
+  }), flags);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.removeOverlappingEntities" id="apidoc.module.twitter-text.removeOverlappingEntities">module twitter-text.removeOverlappingEntities</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.removeOverlappingEntities.removeOverlappingEntities" id="apidoc.element.twitter-text.removeOverlappingEntities.removeOverlappingEntities">
+        function <span class="apidocSignatureSpan">twitter-text.</span>removeOverlappingEntities
+        <span class="apidocSignatureSpan">(entities)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeOverlappingEntities = function (entities) {
+  entities.sort(function(a,b){ return a.indices[0] - b.indices[0]; });
+
+  var prev = entities[0];
+  for (var i = 1; i &lt; entities.length; i++) {
+    if (prev.indices[1] &gt; entities[i].indices[0]) {
+      entities.splice(i, 1);
+      i--;
+    } else {
+      prev = entities[i];
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.splitTags" id="apidoc.module.twitter-text.splitTags">module twitter-text.splitTags</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.splitTags.splitTags" id="apidoc.element.twitter-text.splitTags.splitTags">
+        function <span class="apidocSignatureSpan">twitter-text.</span>splitTags
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">splitTags = function (text) {
+  var firstSplits = text.split("&lt;"),
+      secondSplits,
+      allSplits = [],
+      split;
+
+  for (var i = 0; i &lt; firstSplits.length; i += 1) {
+    split = firstSplits[i];
+    if (!split) {
+      allSplits.push("");
+    } else {
+      secondSplits = split.split("&gt;");
+      for (var j = 0; j &lt; secondSplits.length; j += 1) {
+        allSplits.push(secondSplits[j]);
+      }
+    }
+  }
+
+  return allSplits;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.stringSupplant" id="apidoc.module.twitter-text.stringSupplant">module twitter-text.stringSupplant</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.stringSupplant.stringSupplant" id="apidoc.element.twitter-text.stringSupplant.stringSupplant">
+        function <span class="apidocSignatureSpan">twitter-text.</span>stringSupplant
+        <span class="apidocSignatureSpan">(str, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stringSupplant(str, values) {
+  return str.replace(/#\{(\w+)\}/g, function(match, name) {
+    return values[name] || "";
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twitter-text.tagAttrs" id="apidoc.module.twitter-text.tagAttrs">module twitter-text.tagAttrs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twitter-text.tagAttrs.tagAttrs" id="apidoc.element.twitter-text.tagAttrs.tagAttrs">
+        function <span class="apidocSignatureSpan">twitter-text.</span>tagAttrs
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tagAttrs = function (attributes) {
+  var htmlAttrs = "";
+  for (var k in attributes) {
+    var v = attributes[k];
+    if (BOOLEAN_ATTRIBUTES[k]) {
+      v = v ? k : null;
+    }
+    if (v == null) continue;
+    htmlAttrs += " " + twttr.txt.htmlEscape(k) + "=\"" + twttr.txt.htmlEscape(v.toString()) + "\"";
+  }
+  return htmlAttrs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
