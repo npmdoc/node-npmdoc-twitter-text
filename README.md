@@ -1,4 +1,7 @@
-# api documentation for  [twitter-text (v1.14.3)](https://github.com/twitter/twitter-text-js)  [![npm package](https://img.shields.io/npm/v/npmdoc-twitter-text.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-twitter-text) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-twitter-text.svg)](https://travis-ci.org/npmdoc/node-npmdoc-twitter-text)
+# npmdoc-twitter-text
+
+#### basic api documentation for  [twitter-text (v1.14.3)](https://github.com/twitter/twitter-text-js)  [![npm package](https://img.shields.io/npm/v/npmdoc-twitter-text.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-twitter-text) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-twitter-text.svg)](https://travis-ci.org/npmdoc/node-npmdoc-twitter-text)
+
 #### official twitter text linkification
 
 [![NPM](https://nodei.co/npm/twitter-text.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/twitter-text)
@@ -72,7 +75,8 @@
         "url": "git+https://github.com/twitter/twitter-text-js.git"
     },
     "scripts": {},
-    "version": "1.14.3"
+    "version": "1.14.3",
+    "bin": {}
 }
 ```
 
